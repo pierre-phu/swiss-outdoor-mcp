@@ -1,0 +1,23 @@
+# Personal / AI-assistant working files
+plan/
+docs/PROGRESS.md
+MODE_EMPLOI.md
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Secrets
+.env
+
+# Python / tooling
+.venv/
+__pycache__/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Eval runs (commit only the report referenced in the README)
+evals/runs/
