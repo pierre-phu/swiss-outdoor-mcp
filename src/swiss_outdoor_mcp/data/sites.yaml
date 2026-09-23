@@ -1,11 +1,4 @@
-# Paragliding launch sites.
-#
-# HUMAN-OWNED FILE — Pierre fills this in. Claude must not invent sites, coordinates,
-# orientations or stop names.
-#
-# The single entry below is a placeholder so the loader and its tests have something to chew on.
-# Delete it once real sites are in.
-#
+# Take-off data from ParaglidingEarth, CC BY-SA 3.0 (https://paraglidingearth.com).
 # Field notes:
 #   id            kebab-case, stable forever: it is what the LLM passes to get_flyability.
 #   lat / lon     WGS84 decimal degrees. Validation restricts them to Switzerland.
@@ -13,17 +6,73 @@
 #                 +/-45 deg of one of these is considered flyable (see docs/SPEC.md).
 #   nearest_stop  EXACTLY as the Swiss timetable spells it. Check it resolves first:
 #                   curl 'https://transport.opendata.ch/v1/locations?query=<name>'
-#                 Do not assume the last cable car is routable — coverage is uneven, see
+#                 Do not assume the last cable car is routable - coverage is uneven, see
 #                 docs/api-notes.md section 3.3. Put that last leg in access_notes.
 
 sites:
-  - id: example-site
-    name: TODO Example Launch (placeholder, delete me)
-    region: TODO
-    lat: 46.5
-    lon: 6.6
-    altitude_m: 1000
-    orientations: [S]
-    nearest_stop: TODO
-    access_notes: >-
-      TODO placeholder entry, not a real launch site. Replace with real sites before use.
+  - id: pleiades
+    name: "Pleiades"
+    region: Vaud
+    lat: 46.48330
+    lon: 6.90718
+    altitude_m: 1312
+    orientations: [W]
+    nearest_stop: "Les Pléiades"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=8066 (last edit )
+    # stop distance: 0.2 km
+  - id: lally
+    name: "Lally"
+    region: Vaud
+    lat: 46.47820
+    lon: 6.90986
+    altitude_m: 1236
+    orientations: [SE, S, SW]
+    nearest_stop: "Lally"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=21952 (last edit )
+    # stop distance: 0.3 km
+  - id: jaman
+    name: "Dent de Jaman (Rochers de Naye)"
+    region: Vaud
+    lat: 46.44170
+    lon: 6.97593
+    altitude_m: 1738
+    orientations: [SW, W, NW]
+    nearest_stop: "Jaman"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=7733 (last edit 2021-05-07)
+    # stop distance: 0.1 km
+  - id: berneuse
+    name: "Berneuse-2020"
+    region: Vaud
+    lat: 46.35920
+    lon: 7.00272
+    altitude_m: 2020
+    orientations: [E, S, W]
+    nearest_stop: "Leysin-Feydey"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=7653 (last edit )
+    # stop distance: 1.7 km
+  - id: ruinettes
+    name: "Verbier - Ruinettes _ Fontanets_Attelas"
+    region: Valais
+    lat: 46.09040
+    lon: 7.25185
+    altitude_m: 2169
+    orientations: [S, SW, W]
+    nearest_stop: "Verbier, Médran"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=6831 (last edit 2021-04-11)
+    # stop distance: 1.5 km
+  - id: fiesch
+    name: "Fiesch -Kuehboden (Heimat- Galfera)"
+    region: Valais
+    lat: 46.40480
+    lon: 8.09598
+    altitude_m: 2163
+    orientations: [SE, S, SW]
+    nearest_stop: "Fiesch"
+    access_notes: "TODO"
+    # source: http://www.paraglidingearth.com/?site=6604 (last edit 2021-04-10)
+    # stop distance: 2.9 km

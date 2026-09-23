@@ -1,30 +1,27 @@
-# CO2e emission factors per passenger-kilometre.
+# Greenhouse-gas emission factors per passenger-km (life cycle: operation, energy supply,
+# vehicle and infrastructure), Swiss conditions.
 #
-# HUMAN-OWNED FILE — Pierre fills this in. Claude must not invent factors or sources.
-# An emission factor without a citable source is worse than no factor at all.
-#
-# The values below are placeholder ZEROS, not estimates. estimate_trip_co2 will happily return
-# 0 kg until they are replaced, which is the intended loud failure.
-#
-# Each entry needs:
-#   value_kg_per_pkm  kg CO2e per passenger-kilometre
-#   source_name       the publishing body, e.g. a national environment agency
-#   source_url        a link that actually shows the number
-#   retrieved_on      the date you read it (factors get revised)
-
+# Primary source: mobitool-Faktoren v3.0 (mobitool, 2023), Excel database.
+# Values below are as reported in Table B.1 of Sticher, Wallimann & Balthasar (2024),
+# "How (Not) to Incentivize Sustainable Mobility?", HSLU, arXiv:2409.11142, which cites
+# mobitool-Faktoren v3.0. TODO: confirm each row against the mobitool Excel and, if needed,
+# pick the more specific row (e.g. regional bus / PostBus instead of generic bus).
 factors:
   train:
-    value_kg_per_pkm: 0.0
-    source_name: TODO fill in the publishing body
-    source_url: https://example.invalid/todo
-    retrieved_on: 2026-01-01
+    value_kg_per_pkm: 0.0070   # "Rapid transit railway, regional train, train": 7.0 g
+    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
+    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
+    retrieved_on: 2026-09-24
   bus:
-    value_kg_per_pkm: 0.0
-    source_name: TODO fill in the publishing body
-    source_url: https://example.invalid/todo
-    retrieved_on: 2026-01-01
+    value_kg_per_pkm: 0.1338   # "Bus": 133.8 g - likely an urban-bus average, check vs PostBus
+    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
+    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
+    retrieved_on: 2026-09-24
   car:
-    value_kg_per_pkm: 0.0
-    source_name: TODO fill in the publishing body
-    source_url: https://example.invalid/todo
-    retrieved_on: 2026-01-01
+    value_kg_per_pkm: 0.1864   # "Car, other" (fleet average): 186.4 g
+    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
+    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
+    retrieved_on: 2026-09-24
+  # Optional, useful for mountain access (not in the v0.1 SPEC):
+  # cable_car:
+  #   value_kg_per_pkm: 0.0428  # "Cable car, subway, tramway": 42.8 g
