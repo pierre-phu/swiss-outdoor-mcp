@@ -1,0 +1,29 @@
+# Paragliding launch sites.
+#
+# HUMAN-OWNED FILE — Pierre fills this in. Claude must not invent sites, coordinates,
+# orientations or stop names.
+#
+# The single entry below is a placeholder so the loader and its tests have something to chew on.
+# Delete it once real sites are in.
+#
+# Field notes:
+#   id            kebab-case, stable forever: it is what the LLM passes to get_flyability.
+#   lat / lon     WGS84 decimal degrees. Validation restricts them to Switzerland.
+#   orientations  16-point compass sectors the slope FACES, e.g. [S, SW]. A wind from within
+#                 +/-45 deg of one of these is considered flyable (see docs/SPEC.md).
+#   nearest_stop  EXACTLY as the Swiss timetable spells it. Check it resolves first:
+#                   curl 'https://transport.opendata.ch/v1/locations?query=<name>'
+#                 Do not assume the last cable car is routable — coverage is uneven, see
+#                 docs/api-notes.md section 3.3. Put that last leg in access_notes.
+
+sites:
+  - id: example-site
+    name: TODO Example Launch (placeholder, delete me)
+    region: TODO
+    lat: 46.5
+    lon: 6.6
+    altitude_m: 1000
+    orientations: [S]
+    nearest_stop: TODO
+    access_notes: >-
+      TODO placeholder entry, not a real launch site. Replace with real sites before use.

@@ -1,0 +1,30 @@
+# CO2e emission factors per passenger-kilometre.
+#
+# HUMAN-OWNED FILE — Pierre fills this in. Claude must not invent factors or sources.
+# An emission factor without a citable source is worse than no factor at all.
+#
+# The values below are placeholder ZEROS, not estimates. estimate_trip_co2 will happily return
+# 0 kg until they are replaced, which is the intended loud failure.
+#
+# Each entry needs:
+#   value_kg_per_pkm  kg CO2e per passenger-kilometre
+#   source_name       the publishing body, e.g. a national environment agency
+#   source_url        a link that actually shows the number
+#   retrieved_on      the date you read it (factors get revised)
+
+factors:
+  train:
+    value_kg_per_pkm: 0.0
+    source_name: TODO fill in the publishing body
+    source_url: https://example.invalid/todo
+    retrieved_on: 2026-01-01
+  bus:
+    value_kg_per_pkm: 0.0
+    source_name: TODO fill in the publishing body
+    source_url: https://example.invalid/todo
+    retrieved_on: 2026-01-01
+  car:
+    value_kg_per_pkm: 0.0
+    source_name: TODO fill in the publishing body
+    source_url: https://example.invalid/todo
+    retrieved_on: 2026-01-01
