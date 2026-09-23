@@ -9,7 +9,7 @@ Read all three at the start of every session.
 ## Architecture (3 layers, strict)
 - `src/swiss_outdoor_mcp/server.py` — thin MCP layer: validate input, call domain/clients, map errors. No logic.
 - `src/swiss_outdoor_mcp/domain/` — pure functions (no I/O, no network, no clock). All business logic lives here.
-- `src/swiss_outdoor_mcp/clients/` — async httpx clients for external APIs. Injectable transport for tests/offline mode.
+- `src/swiss_outdoor_mcp/clients/` — async `httpx2` clients for external APIs. Injectable transport for tests/offline mode.
 - `src/swiss_outdoor_mcp/models.py` — Pydantic v2 models for every tool input/output.
 - `src/swiss_outdoor_mcp/data/` — `sites.yaml`, `emission_factors.yaml` (human-owned content, see below).
 - Tools are deterministic: **no LLM calls inside the server**.
@@ -49,8 +49,12 @@ stop, summarise what you tried, propose a simpler alternative, and wait for Pier
 - Language: English for code, comments, docs, commits.
 - Python ≥ 3.11, full type hints, `mypy --strict` clean.
 - Conventional Commits (`feat:`, `fix:`, `test:`, `docs:`, `ci:`, `chore:`), small focused commits.
-- Tests never hit the network: use `respx` + fixtures in `tests/fixtures/`
-  (recorded once via `scripts/record_fixtures.py`).
+- HTTP client is `httpx2` (the maintained successor to `httpx`, and already a dependency of the
+  MCP SDK) — not `httpx`. See `docs/api-notes.md` §1.
+- Tests never hit the network: use `httpx2.MockTransport` + fixtures in `tests/fixtures/`
+  (recorded once via `scripts/record_fixtures.py`). Not `respx`, which only supports `httpx`.
+- Async tests use `anyio`'s pytest plugin (`@pytest.mark.anyio`), as the MCP SDK's own docs do —
+  not `pytest-asyncio`.
 - Tool error messages are written for an LLM to recover, e.g.
   `"Unknown site_id 'xyz'. Call list_sites to get valid ids."`
 - Timezone: `Europe/Zurich` everywhere dates/hours are user-facing.
