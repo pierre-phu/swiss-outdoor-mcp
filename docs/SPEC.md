@@ -23,9 +23,14 @@ no user accounts, no HTTP deployment, no LLM inside the server.
 Source: `data/sites.yaml` (~10 sites in Vaud/Valais, hand-written by Pierre).
 
 ### 2. `get_flyability(site_id: str, date: date) -> Flyability`
-Data: hourly ensemble forecast at the site coordinates (variables and model to be confirmed in
-`docs/api-notes.md`: wind speed, gusts, direction, precipitation; prefer a model with good Alpine
-resolution if the API offers one).
+Data: hourly ensemble forecast at the site coordinates from Open-Meteo — `wind_speed_10m`,
+`wind_gusts_10m`, `wind_direction_10m`, `precipitation` (`docs/api-notes.md` §2.2).
+
+**Model: both `icon_d2_eps` and `icon_eu_eps`, requested in a single call, and whichever one
+actually covers the requested date wins** — `icon_d2_eps` (2 km, Alpine resolution) reaches about
+two days out, `icon_eu_eps` (13 km) about five. Coverage is decided by testing the response for
+`null`s across the window, not by arithmetic on the lead time, because a model's cut-off drifts
+with its run. Full rule and the probe behind it: `docs/api-notes.md` §2.5–§2.6.
 
 `FlyabilityCriteria` (defaults, overridable in code, returned in output):
 - `max_wind_kmh = 20`, `max_gust_kmh = 30`, `max_precip_mm_h = 0.1`
@@ -41,7 +46,11 @@ Computation (pure function `compute_flyability`):
 - `wind_kmh`: median, p10, p90 over members, per hour.
 
 `Flyability` also includes: `site_id`, `date`, `criteria`, `n_members`, `model`, `generated_at`, `disclaimer`.
-Errors: unknown site, date outside the forecast horizon (horizon to verify), upstream unavailable.
+`model` is the id that answered (`icon_d2_eps` or `icon_eu_eps`), so the user can tell a 2 km
+answer from a 13 km one; `n_members` counts that model's members only (20 vs 40) — the two
+ensembles are never pooled.
+Errors: unknown site, date outside the forecast horizon (the last date `icon_eu_eps` actually
+answers for, discovered per request, not a hard-coded `+5`), upstream unavailable.
 
 ### 3. `get_connections(origin: str, destination: str, date: date, arrive_before: time | None = None, depart_after: time | None = None, limit: int = 3) -> list[Connection]`
 `Connection`: `departure`, `arrival`, `duration_min`, `transfers`,
@@ -61,7 +70,7 @@ Domain exceptions in `errors.py` (`SiteNotFoundError`, `StopNotFoundError`, `Dat
 with actionable messages for the LLM.
 
 ## Offline / fixture mode
-Clients take an injectable `httpx` transport. Env var `SWISS_OUTDOOR_OFFLINE=1` makes the server
+Clients take an injectable `httpx2` transport. Env var `SWISS_OUTDOOR_OFFLINE=1` makes the server
 serve recorded fixtures (used by evals and the demo GIF, so both are reproducible).
 
 ## Evaluation (`evals/`)

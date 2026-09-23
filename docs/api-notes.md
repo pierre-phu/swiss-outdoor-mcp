@@ -1,6 +1,7 @@
 # API notes — verified facts
 
-Every statement here was checked against the source linked next to it, on **2026-09-23**.
+Every statement here was checked against the source linked next to it, on **2026-09-23**,
+except §2.5, §2.6 and §3.5, which were added on **2026-09-24**.
 Anything that could not be confirmed is in [UNVERIFIED](#unverified) at the bottom — never build
 on those without checking first.
 
@@ -158,11 +159,11 @@ Docs: <https://open-meteo.com/en/docs/ensemble-api>
 | GEM | Global | 0.25° | 21 | 16 days |
 | Google WeatherNext 2 | Global | — | 64 | 15 days |
 
-> **Decision needed for `get_flyability` (day 2).** `icon_d2_eps` has the resolution the Alps
-> demand (2 km) but only reaches **2 days** ahead — not enough for "where can I fly on Saturday"
-> asked on a Monday. `icon_eu_eps` gives 5 days at 13 km, which smooths Alpine valley wind badly.
-> Options: pick `icon_eu_eps` for range; or select the model per requested date; or request
-> several models and report which one answered. **Pierre decides.**
+> **Decided (Pierre, 2026-09-24): request both `icon_d2_eps` and `icon_eu_eps` in a single call,
+> and use whichever one actually covers the requested date** — `icon_d2_eps` for the near term
+> (today and tomorrow), `icon_eu_eps` from day 3 out to day 5. `Flyability.model` reports which
+> one answered, so the user always knows whether they got the 2 km grid or the 13 km one.
+> The mechanics of a two-model request are in §2.5; the selection rule is in §2.6.
 
 ### 2.2 Hourly variables we need
 
@@ -202,6 +203,10 @@ Members are **flattened into sibling keys** of `hourly` (and `hourly_units`), su
 - Without `timezone=`, times come back as **naive UTC** (`"timezone":"GMT"`,
   `utc_offset_seconds: 0`). We must pass `timezone=Europe/Zurich` or convert explicitly.
 
+> ⚠️ **The key names above are the _single-model_ shape.** `get_flyability` always asks for two
+> models at once, and that appends a `_<model_id>` suffix to every key. Build the client against
+> §2.5, not against this section, and do not record a single-model fixture for it.
+
 ### 2.4 Rate limits, licence, attribution
 
 Source: <https://open-meteo.com/en/terms> and <https://open-meteo.com/en/licence>
@@ -211,6 +216,84 @@ Source: <https://open-meteo.com/en/terms> and <https://open-meteo.com/en/licence
 - Attribution is **required**: *"You must include a link next to any location Open-Meteo data are
   displayed, for example: Weather data by Open-Meteo.com"*. → the `Flyability` output must carry
   this attribution, and it goes in the README.
+
+### 2.5 Requesting two models at once *(probe)*
+
+This resolves [UNVERIFIED 5](#unverified). Probed on **2026-09-24**:
+
+```
+GET https://ensemble-api.open-meteo.com/v1/ensemble
+    ?latitude=46.4048&longitude=8.09598
+    &hourly=wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation
+    &models=icon_d2_eps,icon_eu_eps&forecast_days=5&timezone=Europe/Zurich
+```
+
+**One merged object, not a list.** The response is a single JSON object with one `hourly` block
+and **one shared `time` axis**, exactly like a single-model response. There is no per-model
+nesting and no list to iterate.
+
+**Every series gains a `_<model_id>` suffix.** The key grammar becomes:
+
+```
+<variable>[_memberNN]_<model_id>
+    wind_speed_10m_icon_d2_eps            <- control run, ICON-D2-EPS
+    wind_speed_10m_member01_icon_d2_eps   <- perturbed member 1
+    wind_speed_10m_member39_icon_eu_eps   <- perturbed member 39, ICON-EU-EPS
+```
+
+- The suffix appears **even on the control run**, and in `hourly_units` as well.
+- Series counts matched the advertised member counts exactly, for all four variables we need:
+  **20 for `icon_d2_eps`** (control + `member01`…`member19`) and **40 for `icon_eu_eps`**
+  (control + `member01`…`member39`). That is a second, independent confirmation of the
+  control-run reading in §2.3 (see [UNVERIFIED 4](#unverified)).
+
+**The shorter model is padded with `null`, not truncated.** The shared time axis runs to the
+**longest** model's horizon; the shorter model's series are the same length and simply end in
+`null`. From the probe above (issued 2026-09-24, `forecast_days=5`, 120 hourly steps):
+
+| Model | Non-null steps | Last non-null timestamp |
+| --- | --- | --- |
+| `icon_d2_eps` | 45 of 120 | `2026-09-25T20:00` (D+1) |
+| `icon_eu_eps` | 117 of 120 | `2026-09-28T20:00` (D+4) |
+
+- The `null` tail is **contiguous** — once a model's values stop, every later step is `null`. So
+  "does this model cover hour X" is a plain non-null test, with no holes to defend against.
+- **`forecast_days` cannot buy horizon.** Re-probed with `forecast_days=7`: the time axis grew to
+  168 steps but the non-null counts did not move (still 45 and 117). Asking for more days only
+  enlarges the `null` padding and the payload. Size the request to the date actually requested.
+- ⚠️ **A model's cut-off is run-relative and drifts through the day**, so it is not a whole number
+  of calendar days. Both models ended at 20:00 local here — mid-evening, not midnight.
+  **Never derive coverage arithmetically from the lead time; read it off the `null`s.**
+
+**One `elevation` for the whole response.** The merged response returns a single top-level
+`elevation` (2173.0 m in the probe), not one per model. Both models also returned 2173.0 m when
+probed individually at this site, so nothing was lost here — but that is one site, and a merged
+request cannot show a per-model grid elevation.
+
+### 2.6 Model selection rule for `get_flyability`
+
+Decided by Pierre on 2026-09-24. It relies on the mechanics in §2.5.
+
+1. Ask for **both** models in **one** HTTP call (one call, two models — not two calls).
+2. Slice the requested date's window (10:00–17:00 Europe/Zurich) out of the shared `time` axis.
+3. If **`icon_d2_eps` is non-null across that whole window → use `icon_d2_eps`** (2 km).
+4. Otherwise, if **`icon_eu_eps` is → use `icon_eu_eps`** (13 km).
+5. Otherwise → `DateOutOfRangeError`.
+
+`Flyability.model` reports the id that answered, and `n_members` counts **that model's** keys only
+(20 vs 40). The two ensembles must never be pooled: different resolutions, different biases.
+
+> **Why the rule tests the data rather than the lead time.** Pierre's instruction was "d2 under
+> 2 days, eu for 3–5 days". Written as arithmetic that leaves D+2 undefined and, worse, assumes a
+> cut-off that actually drifts with the model run (§2.5). Testing the `null`s carries out the same
+> intent without either problem: on the probe date `icon_d2_eps` reached D+1 20:00, so D+0 and D+1
+> take the 2 km grid and D+2 onward fall through to `icon_eu_eps` — the rule exactly as stated.
+> When a run is late, behaviour degrades to the coarser model instead of reading `null` as data.
+
+> **Horizon, stated as dates.** On the probe date `icon_eu_eps` covered the 10:00–17:00 window
+> through **D+4** — five calendar days counting today. "5 days" in the model table is *not* D+5.
+> `DateOutOfRangeError` should quote the last date that actually answered instead of a hard-coded
+> `+5`, and the eval's "Saturday" task must not sit silently on that boundary.
 
 ---
 
@@ -307,6 +390,46 @@ statement. See [UNVERIFIED](#unverified).
 Response headers on a live call showed `cache-control: no-cache` and
 `access-control-allow-origin: *` — **no `X-RateLimit-*` headers**, so we cannot observe our budget.
 
+> **Decided (Pierre, 2026-09-24): transport.opendata.ch is the transport source for v0.1.** The
+> unknowns in UNVERIFIED 1–2 are accepted rather than resolved, so they become engineering
+> constraints instead of blockers:
+>
+> - **One call per user question, never a loop over sites.** `get_connections` and
+>   `estimate_trip_co2` are called for a site the user already chose. Nothing may fan out across
+>   `sites.yaml`; if a future tool needs that, it comes back to Pierre first.
+> - **Keep `limit` at the SPEC default of 3.** The parameter accepts up to 16; we do not use it.
+> - **Tests and evals never hit this API** — fixtures only, which is already the rule in
+>   `CLAUDE.md`. The eval harness must stay runnable offline so a nightly run costs zero calls.
+> - **Credit it in the README and state in the limitations section that its terms and rate limit
+>   are undocumented and it self-describes as "inofficial".** This is the honest disclosure the
+>   unknown licence calls for.
+> - **A failure here is `UpstreamUnavailableError`, never a crash** — an undocumented limit means
+>   we could be throttled without warning, so that path has to be real from day 2.
+
+### 3.5 The stops named by `sites.yaml` all resolve *(probe)*
+
+Checked on **2026-09-24**, one `GET /v1/locations?query=<nearest_stop>&type=station` per site.
+Every `nearest_stop` string in `sites.yaml` came back as an **exact top match**:
+
+| `nearest_stop` | Resolved station | id |
+| --- | --- | --- |
+| `Les Pléiades` | Les Pléiades | `8501288` |
+| `Lally` | Lally | `8501287` |
+| `Jaman` | Jaman | `8501367` |
+| `Leysin-Feydey` | Leysin-Feydey | `8501482` |
+| `Verbier, Médran` | Verbier, Médran | `8570693` |
+| `Fiesch` | Fiesch | `8501672` |
+
+- Three of the six are **ambiguous on a prefix search** and are only unambiguous because the
+  stored string is exact: `Jaman` also matches `Clarens, Jaman`; `Leysin-Feydey` also matches
+  `Leysin-Feydey, gare`; `Fiesch` also matches `Fiesch Feriendorf` and `Fiesch (Talstation)`.
+  → Take the **exact-name match** when one exists rather than blindly taking `stations[0]`, and
+  never "helpfully" normalise or truncate a `nearest_stop` before querying.
+- Entries with a `null` `id` appear in `/locations` results and are not usable stops; filter them
+  out before matching.
+- These ids are **recorded for reference, not for use** — `sites.yaml` stores names, and the SPEC
+  routes by name. Do not hard-code ids into the client.
+
 ---
 
 ## UNVERIFIED
@@ -314,19 +437,24 @@ Response headers on a live call showed `cache-control: no-cache` and
 Do not build on any of these without checking first. Listed for Pierre.
 
 1. **transport.opendata.ch rate limit — no number anywhere.** The docs defer to
-   timetable.search.ch, whose own limit we have not found. *Mitigation:* treat the API as scarce —
-   cache aggressively, keep `limit` small, and never call it in a loop over all sites.
+   timetable.search.ch, whose own limit we have not found. *Still unverified, but no longer a
+   blocker:* Pierre accepted the risk on 2026-09-24 and it is handled by the call-budget rules
+   in [§3.4](#34-rate-limits-and-licence).
 2. **transport.opendata.ch licence and terms of use.** Neither the docs page nor the landing page
    states one, and the API self-describes as "inofficial". Unknown whether attribution is required
-   or whether production use is sanctioned. *Mitigation:* credit it in the README anyway, and note
-   in the README limitations that the upstream terms are unclear.
+   or whether production use is sanctioned. *Still unverified, but no longer a blocker:* Pierre
+   accepted the risk on 2026-09-24; we credit it and disclose the uncertainty in the README's
+   limitations section. See [§3.4](#34-rate-limits-and-licence).
 3. **Whether `/locations?x=&y=` populates `distance`.** It was `null` for a `query=` search. Not
    probed with coordinates. Only matters if we ever do nearest-stop lookup by position.
 4. **Open-Meteo: whether the unsuffixed series is formally the control run.** The member-count
-   arithmetic (control + 19 = 20 advertised) makes this near-certain, but it is inference from a
-   probe, not a documented statement. Affects what `n_members` should report.
-5. **Open-Meteo: per-model horizon when several models are requested at once.** Untested whether
-   a mixed `models=` request truncates to the shortest horizon or pads with nulls.
+   arithmetic makes this near-certain, and [§2.5](#25-requesting-two-models-at-once-probe)
+   reproduced it independently for `icon_eu_eps` (control + 39 = the 40 advertised). Still
+   inference from probes rather than a documented statement. Affects what `n_members` reports.
+5. ~~**Open-Meteo: per-model horizon when several models are requested at once.**~~
+   **RESOLVED 2026-09-24** by probe — it pads with `null` to the longest model's horizon and each
+   model stops at its own contiguous cut-off. Full findings in
+   [§2.5](#25-requesting-two-models-at-once-probe). (Number kept so older references still resolve.)
 6. **`mcp` 2.2.0 is pinned from PyPI metadata only.** The exact `ToolError` message envelope and
    `Client` signature come from the SDK docs on `main`, which may be ahead of the 2.2.0 release.
    The `ping` tool and its test exist precisely to catch a mismatch on day 1.
