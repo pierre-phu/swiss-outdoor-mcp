@@ -16,6 +16,7 @@ from typing import Any, Self
 
 import httpx2
 
+from swiss_outdoor_mcp.clients._http import get_json
 from swiss_outdoor_mcp.domain.transport import to_connection, to_station
 from swiss_outdoor_mcp.errors import StopNotFoundError, UpstreamUnavailableError
 from swiss_outdoor_mcp.models import Connection, ConnectionQuery, Station
@@ -67,28 +68,7 @@ class TransportClient:
         await self._client.aclose()
 
     async def _get(self, path: str, params: dict[str, Any]) -> dict[str, Any]:
-        """GET and decode, mapping every possible failure onto `UpstreamUnavailableError`.
-
-        A timeout, a refused connection, a 500 and a body that is not JSON are all the same thing
-        to the caller: we could not get an answer, and it says nothing about whether a connection
-        exists. The error message says exactly that, so the model does not report "no trains".
-        """
-        try:
-            response = await self._client.get(path, params=params)
-            response.raise_for_status()
-            payload = response.json()
-        except httpx2.HTTPStatusError as exc:
-            raise UpstreamUnavailableError(SERVICE, f"HTTP {exc.response.status_code}") from exc
-        except httpx2.TimeoutException as exc:
-            raise UpstreamUnavailableError(SERVICE, "timed out") from exc
-        except httpx2.HTTPError as exc:
-            raise UpstreamUnavailableError(SERVICE, type(exc).__name__) from exc
-        except ValueError as exc:  # json() on a non-JSON body
-            raise UpstreamUnavailableError(SERVICE, "malformed response") from exc
-
-        if not isinstance(payload, dict):
-            raise UpstreamUnavailableError(SERVICE, "malformed response")
-        return payload
+        return await get_json(self._client, SERVICE, path, params)
 
     async def search_locations(self, query: str, *, stations_only: bool = True) -> list[Station]:
         """Look a stop name up. Fuzzy: "Leysin Feydey" finds "Leysin-Feydey".

@@ -4,8 +4,11 @@ Built on hand-made sites rather than the packaged file, so these keep passing wh
 `sites.yaml`. One test does touch the real file, to check the filters agree with the content.
 """
 
+import pytest
+
 from swiss_outdoor_mcp.data_loader import load_sites
-from swiss_outdoor_mcp.domain.sites import filter_sites
+from swiss_outdoor_mcp.domain.sites import filter_sites, get_site
+from swiss_outdoor_mcp.errors import SiteNotFoundError
 from swiss_outdoor_mcp.models import Site
 
 
@@ -75,3 +78,15 @@ def test_every_packaged_site_is_reachable_by_its_own_region_and_orientation() ->
         for sector in site.orientations:
             by_orientation = filter_sites(sites, orientation=sector)
             assert site.id in {found.id for found in by_orientation}
+
+
+class TestGetSite:
+    def test_finds_by_exact_id(self) -> None:
+        sites = [make_site("fiesch", "Valais", ["S"]), make_site("jaman", "Vaud", ["W"])]
+
+        assert get_site(sites, "jaman").region == "Vaud"
+
+    @pytest.mark.parametrize("site_id", ["chamonix", "Fiesch", " fiesch", "fie"])
+    def test_anything_else_names_the_recovery_call(self, site_id: str) -> None:
+        with pytest.raises(SiteNotFoundError, match="Call list_sites"):
+            get_site([make_site("fiesch", "Valais", ["S"])], site_id)

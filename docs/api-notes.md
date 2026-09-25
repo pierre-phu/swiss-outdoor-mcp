@@ -1,8 +1,8 @@
 # API notes — verified facts
 
 Every statement here was checked against the source linked next to it, on **2026-09-23**.
-§2.5, §2.6 and §3.5 were added on **2026-09-24**; §3.6, §3.7 and the two SDK notes at the end of
-§1.4 on **2026-09-25**.
+§2.5, §2.6 and §3.5 were added on **2026-09-24**; §3.6, §3.7, the two SDK notes at the end of
+§1.4 and the wind-direction convention in §2.2 on **2026-09-25**.
 Anything that could not be confirmed is in [UNVERIFIED](#unverified) at the bottom — never build
 on those without checking first.
 
@@ -181,6 +181,18 @@ Docs: <https://open-meteo.com/en/docs/ensemble-api>
 | `wind_gusts_10m` | "Gusts at 10 meters above ground as a maximum of the preceding hour" | km/h |
 | `wind_direction_10m` | Wind direction at the given height | ° |
 | `precipitation` | "Total precipitation (rain, showers, snow) sum of the preceding hour" | mm |
+
+**`wind_direction_10m` is the direction the wind blows _from_** (meteorological convention),
+0-360° with 0/360 = north. *(verified 2026-09-25 from source — neither the
+[ensemble docs](https://open-meteo.com/en/docs/ensemble-api) nor the
+[forecast docs](https://open-meteo.com/en/docs) state it.)* Open-Meteo derives direction from the
+u/v wind components in `windirectionFast(u, v)`,
+[`Sources/CHelper/src/shim.c` at `faa076a`](https://github.com/open-meteo/open-meteo/blob/faa076aee2142cf921a4df3c6223b1818089a5f7/Sources/CHelper/src/shim.c):
+a pure eastward flow (`v == 0`, `u > 0`) returns **270** (from the west) and a pure northward flow
+(`u == 0`, `v > 0`) returns **180** (from the south). The commented-out reference formula in
+`Sources/App/Helper/Meteorology.swift`, `atan2(u, v) + 180`, agrees. This is what lets
+`get_flyability` compare the value directly with the sector a launch faces: a south-facing slope
+wants wind from the south.
 
 ### 2.3 Ensemble members in the JSON response *(probe)*
 

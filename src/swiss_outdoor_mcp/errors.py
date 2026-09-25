@@ -5,6 +5,8 @@ only module that maps them onto the protocol. Every message is written for an LL
 what went wrong *and* name the tool call that recovers from it.
 """
 
+from datetime import date
+
 __all__ = [
     "DateOutOfRangeError",
     "SiteNotFoundError",
@@ -41,15 +43,21 @@ class StopNotFoundError(SwissOutdoorError):
 
 
 class DateOutOfRangeError(SwissOutdoorError):
-    """A forecast was requested outside the model's horizon."""
+    """A forecast was requested for a date no weather model currently covers.
 
-    def __init__(self, requested: str, max_days_ahead: int) -> None:
+    The covered range is read off each response rather than hard-coded, because the models'
+    horizon drifts with their run times (`docs/api-notes.md` section 2.6).
+    """
+
+    def __init__(self, requested: date, first_available: date, last_available: date) -> None:
         super().__init__(
-            f"No forecast available for {requested}: the weather model only reaches "
-            f"{max_days_ahead} days ahead. Ask for an earlier date."
+            f"No forecast available for {requested.isoformat()}. The weather models currently "
+            f"cover {first_available.isoformat()} to {last_available.isoformat()}; "
+            "ask for a date in that range."
         )
         self.requested = requested
-        self.max_days_ahead = max_days_ahead
+        self.first_available = first_available
+        self.last_available = last_available
 
 
 class UpstreamUnavailableError(SwissOutdoorError):

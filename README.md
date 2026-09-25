@@ -13,8 +13,8 @@ ensemble-based flyability probabilities, train connections — and the LLM compo
 
 ## Status
 
-Day 1 of a 5-day build: project scaffold, a `ping` tool and the data schemas. The real tools
-(`list_sites`, `get_flyability`, `get_connections`, `estimate_trip_co2`) land on days 2–4.
+Work in progress (day 3 of a 5-day build). Working today: `list_sites`, `get_flyability` and
+`get_connections`. Still to come: `estimate_trip_co2`, offline fixture mode and the eval harness.
 See [`docs/SPEC.md`](docs/SPEC.md).
 
 ## Install and run
@@ -37,6 +37,16 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md). Verified facts about every upstream AP
 
 This is **not a flight-safety tool.** Flyability output is an indicator built from a public
 weather model; it does not replace pilot judgment, a site briefing, or official aviation weather.
+
+- `p_flyable` is the **share of ensemble members** that agree, not a calibrated probability.
+- Winds are **10 m above the model's terrain**, not at launch height. The model cell can sit
+  hundreds of metres from the real launch altitude; `grid_elevation_m` reports it. No thermals,
+  no foehn, no upper winds.
+- **Near-calm hours can score low**: the direction check applies whatever the wind speed, so a
+  1 km/h breeze from the wrong side fails it.
+- The forecast reaches about **four days out**. The exact horizon moves with each model run and
+  is read from every response.
+- The sites' `access_notes` (the last leg from the stop to the launch) are not filled in yet.
 
 ## Data sources
 
