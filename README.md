@@ -1,5 +1,7 @@
 # swiss-outdoor-mcp
 
+[![CI](https://github.com/pierre-phu/swiss-outdoor-mcp/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/pierre-phu/swiss-outdoor-mcp/actions/workflows/ci.yml)
+
 An [MCP](https://modelcontextprotocol.io) server that gives an LLM client reliable, computed facts
 for planning Swiss mountain outings by public transport. The v0.1 use case is paragliding:
 
