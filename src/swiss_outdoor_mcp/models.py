@@ -1,7 +1,4 @@
-"""Pydantic models for tool inputs, tool outputs and the YAML data files.
-
-The forecast models arrive with `get_flyability` on day 3.
-"""
+"""Pydantic models for tool inputs, tool outputs and the YAML data files."""
 
 from datetime import date, datetime, time
 from typing import Annotated, Literal, Self
@@ -14,12 +11,17 @@ __all__ = [
     "ConnectionQuery",
     "EmissionFactor",
     "EmissionFactorsFile",
+    "EnsembleModel",
+    "Flyability",
+    "FlyabilityCriteria",
+    "HourlyFlyability",
     "Section",
     "SectionMode",
     "Site",
     "SitesFile",
     "Station",
     "TransportMode",
+    "WindSpread",
 ]
 
 # fmt: off
@@ -159,6 +161,109 @@ class ConnectionQuery(_Strict):
                 "Use arrive_before to be somewhere by a time, depart_after to leave after one."
             )
         return self
+
+
+EnsembleModel = Literal["icon_d2_eps", "icon_eu_eps"]
+"""The two Open-Meteo ensembles `get_flyability` reads, in order of preference.
+
+`icon_d2_eps` is the 2 km grid with 20 members, reaching about two days out; `icon_eu_eps` is the
+13 km grid with 40 members, reaching about five (`docs/api-notes.md` sections 2.1 and 2.6).
+"""
+
+Probability = Annotated[float, Field(ge=0, le=1)]
+
+
+class FlyabilityCriteria(_Strict):
+    """The thresholds a member-hour must meet to count as flyable.
+
+    Every limit is inclusive: a wind of exactly `max_wind_kmh` passes. The window is inclusive
+    at both ends too, so the default 10:00-17:00 is eight hourly steps. The whole object is
+    echoed in every `Flyability`, so the answer always says what it assumed.
+    """
+
+    max_wind_kmh: Annotated[float, Field(gt=0, description="Mean wind at 10 m, at most.")] = 20.0
+    max_gust_kmh: Annotated[
+        float, Field(gt=0, description="Strongest gust in the preceding hour, at most.")
+    ] = 30.0
+    max_precip_mm_h: Annotated[
+        float, Field(ge=0, description="Precipitation in the preceding hour, at most.")
+    ] = 0.1
+    direction_tolerance_deg: Annotated[
+        float,
+        Field(
+            ge=0,
+            le=180,
+            description="How far the wind may come from off one of the launch's orientations.",
+        ),
+    ] = 45.0
+    window_start: time = Field(default=time(10), description="Local time, Europe/Zurich.")
+    window_end: time = Field(default=time(17), description="Local time, Europe/Zurich, inclusive.")
+    min_consecutive_hours: Annotated[int, Field(ge=1)] = 3
+
+    @model_validator(mode="after")
+    def _window_is_whole_hours_and_long_enough(self) -> Self:
+        for bound in (self.window_start, self.window_end):
+            if (bound.minute, bound.second, bound.microsecond) != (0, 0, 0):
+                raise ValueError(f"window bounds must be whole hours, got {bound.isoformat()}")
+        if self.window_start >= self.window_end:
+            raise ValueError("window_start must be before window_end")
+        steps = self.window_end.hour - self.window_start.hour + 1
+        if self.min_consecutive_hours > steps:
+            raise ValueError(
+                f"min_consecutive_hours={self.min_consecutive_hours} can never be met "
+                f"in a {steps}-step window"
+            )
+        return self
+
+
+class WindSpread(_Strict):
+    """How much the ensemble members disagree about the wind at one hour, in km/h."""
+
+    median: float
+    p10: float
+    p90: float
+
+
+class HourlyFlyability(_Strict):
+    """One hour of the window: the share of members meeting each criterion, then all of them."""
+
+    time: datetime
+    p_wind_ok: Probability
+    p_gust_ok: Probability
+    p_dry: Probability
+    p_direction_ok: Probability
+    p_flyable: Probability
+    wind_kmh: WindSpread
+
+
+class Flyability(_Strict):
+    """The answer of `get_flyability`: an ensemble-based indicator for one site and one day."""
+
+    site_id: str
+    date: date
+    p_flyable: Probability = Field(
+        description=(
+            "Share of ensemble members with at least min_consecutive_hours consecutive "
+            "flyable hours inside the window."
+        )
+    )
+    hourly: list[HourlyFlyability]
+    model: EnsembleModel = Field(
+        description="Which ensemble answered: icon_d2_eps is the 2 km grid, icon_eu_eps 13 km."
+    )
+    n_members: Annotated[int, Field(ge=1)]
+    grid_elevation_m: float | None = Field(
+        default=None,
+        description=(
+            "Terrain height of the model's grid cell. Winds are 10 m above this, "
+            "which may be far from the launch altitude."
+        ),
+    )
+    criteria: FlyabilityCriteria
+    method: str
+    generated_at: datetime
+    disclaimer: str
+    attribution: str
 
 
 class EmissionFactor(_Strict):

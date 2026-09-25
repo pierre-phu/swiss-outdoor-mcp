@@ -6,6 +6,7 @@ the network belongs in `clients/`.
 
 from collections.abc import Callable, Coroutine
 from datetime import date as date_type
+from datetime import datetime
 from datetime import time as time_type
 from functools import wraps
 from typing import Annotated, Any, ParamSpec, TypeVar
@@ -16,11 +17,19 @@ from mcp.types import ToolAnnotations
 from pydantic import Field, ValidationError
 
 from swiss_outdoor_mcp import __version__
+from swiss_outdoor_mcp.clients.openmeteo import OpenMeteoClient
 from swiss_outdoor_mcp.clients.transport import TransportClient
 from swiss_outdoor_mcp.data_loader import load_sites
-from swiss_outdoor_mcp.domain.sites import filter_sites
+from swiss_outdoor_mcp.domain.flyability import ZURICH, compute_flyability
+from swiss_outdoor_mcp.domain.sites import filter_sites, get_site
 from swiss_outdoor_mcp.errors import SwissOutdoorError
-from swiss_outdoor_mcp.models import Connection, ConnectionQuery, Site
+from swiss_outdoor_mcp.models import (
+    Connection,
+    ConnectionQuery,
+    Flyability,
+    FlyabilityCriteria,
+    Site,
+)
 
 __all__ = ["mcp", "tool_errors"]
 
@@ -36,6 +45,11 @@ def _transport_client() -> TransportClient:
     where `SWISS_OUTDOOR_OFFLINE` will hook in when offline mode lands.
     """
     return TransportClient()
+
+
+def _weather_client() -> OpenMeteoClient:
+    """Build the weather client. Same seam as `_transport_client`, for the same reasons."""
+    return OpenMeteoClient()
 
 
 mcp = MCPServer(
@@ -104,6 +118,33 @@ async def list_sites(
     often cannot route.
     """
     return filter_sites(load_sites(), region=region, orientation=orientation)
+
+
+@mcp.tool(annotations=ToolAnnotations(read_only_hint=True))
+@tool_errors
+async def get_flyability(
+    site_id: Annotated[str, Field(description="A launch site id, as returned by list_sites.")],
+    date: Annotated[
+        date_type,
+        Field(description="Day to score, YYYY-MM-DD, Europe/Zurich. Today up to about 4 days out."),
+    ],
+) -> Flyability:
+    """Estimate how likely a launch site is to be flyable on a given day, from a weather ensemble.
+
+    p_flyable is the share of ensemble members with enough consecutive hours of acceptable wind,
+    gusts, rain and wind direction for the site's orientation; `hourly` breaks it down per
+    criterion. It is an indicator, not a go/no-go: always relay the `disclaimer` and the
+    `attribution` to the user, and say which `model` answered.
+    """
+    site = get_site(load_sites(), site_id)
+    criteria = FlyabilityCriteria()
+    async with _weather_client() as client:
+        forecast = await client.get_forecast(
+            site.lat, site.lon, date, criteria.window_start, criteria.window_end
+        )
+    return compute_flyability(
+        forecast, site, date, criteria, generated_at=datetime.now(ZURICH).replace(microsecond=0)
+    )
 
 
 @mcp.tool(annotations=ToolAnnotations(read_only_hint=True))

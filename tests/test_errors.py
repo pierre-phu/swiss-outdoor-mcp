@@ -4,6 +4,8 @@ They are what an LLM reads after a failed call, and they are the only thing tell
 recover. Each one must name the fix. If you change a message, change the assertion deliberately.
 """
 
+from datetime import date
+
 import pytest
 
 from swiss_outdoor_mcp.errors import (
@@ -36,12 +38,12 @@ def test_stop_not_found_falls_back_to_advice_without_suggestions() -> None:
     assert error.suggestions == []
 
 
-def test_date_out_of_range_states_the_horizon() -> None:
-    error = DateOutOfRangeError("2026-10-01", max_days_ahead=2)
+def test_date_out_of_range_quotes_the_covered_range() -> None:
+    error = DateOutOfRangeError(date(2026, 10, 1), date(2026, 9, 25), date(2026, 9, 29))
 
     assert "2026-10-01" in str(error)
-    assert "2 days ahead" in str(error)
-    assert "earlier date" in str(error)
+    assert "cover 2026-09-25 to 2026-09-29" in str(error), "quote the range that answered"
+    assert error.last_available == date(2026, 9, 29)
 
 
 def test_upstream_unavailable_tells_the_model_not_to_conclude_anything() -> None:
@@ -61,7 +63,7 @@ def test_upstream_unavailable_without_detail() -> None:
     [
         SiteNotFoundError("x"),
         StopNotFoundError("x"),
-        DateOutOfRangeError("2026-01-01", 2),
+        DateOutOfRangeError(date(2026, 1, 1), date(2026, 1, 2), date(2026, 1, 6)),
         UpstreamUnavailableError("x"),
     ],
 )

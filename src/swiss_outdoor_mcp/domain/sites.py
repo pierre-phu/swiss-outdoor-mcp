@@ -9,9 +9,10 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 
+from swiss_outdoor_mcp.errors import SiteNotFoundError
 from swiss_outdoor_mcp.models import Site
 
-__all__ = ["filter_sites"]
+__all__ = ["filter_sites", "get_site"]
 
 
 def filter_sites(
@@ -38,3 +39,15 @@ def filter_sites(
             continue
         result.append(site)
     return result
+
+
+def get_site(sites: Iterable[Site], site_id: str) -> Site:
+    """Return the site with this exact id, or raise `SiteNotFoundError`.
+
+    Exact match only: the id is a stable key the model copied from `list_sites`, and guessing
+    at a near miss would score the wrong mountain.
+    """
+    for site in sites:
+        if site.id == site_id:
+            return site
+    raise SiteNotFoundError(site_id)
