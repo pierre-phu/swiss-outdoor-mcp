@@ -1,6 +1,6 @@
 [project]
 name = "swiss-outdoor-mcp"
-version = "0.1.0.dev0"
+version = "0.1.0a1"
 description = "MCP server for planning Swiss mountain outings by public transport"
 readme = "README.md"
 requires-python = ">=3.11"
