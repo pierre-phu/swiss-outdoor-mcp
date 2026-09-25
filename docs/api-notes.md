@@ -1,7 +1,8 @@
 # API notes — verified facts
 
-Every statement here was checked against the source linked next to it, on **2026-09-23**,
-except §2.5, §2.6 and §3.5, which were added on **2026-09-24**.
+Every statement here was checked against the source linked next to it, on **2026-09-23**.
+§2.5, §2.6 and §3.5 were added on **2026-09-24**; §3.6, §3.7 and the two SDK notes at the end of
+§1.4 on **2026-09-25**.
 Anything that could not be confirmed is in [UNVERIFIED](#unverified) at the bottom — never build
 on those without checking first.
 
@@ -130,6 +131,13 @@ async def test_call_add_tool(client: Client):
   which is why this project uses `anyio` rather than `pytest-asyncio`.
 - `mcp.shared.memory` exposes only `create_client_server_memory_streams()` — the lower-level
   primitive. We do not need it.
+- ⚠️ **A listed tool's schema is `tool.input_schema`, snake_case** *(confirmed 2026-09-25 by
+  `AttributeError` in a test)*. The wire format keeps the JSON-RPC spelling `inputSchema`, and the
+  1.x SDK exposed that name on the Python object too, so every older example is wrong here. The
+  Pydantic model raises `AttributeError: 'Tool' object has no attribute 'inputSchema'`.
+- A `tools/call` result carries `content`, `isError` **and** `structuredContent` *(probe over real
+  stdio, 2026-09-25)*. A tool returning a Pydantic model or a list of them gets the parsed object
+  in `structuredContent`, with the JSON text mirrored in `content[0].text`.
 
 ---
 
@@ -429,6 +437,64 @@ Every `nearest_stop` string in `sites.yaml` came back as an **exact top match**:
   out before matching.
 - These ids are **recorded for reference, not for use** — `sites.yaml` stores names, and the SPEC
   routes by name. Do not hard-code ids into the client.
+
+### 3.6 What an unknown stop looks like *(probe)*
+
+Probed on **2026-09-25**. This one matters: the failure is **not** an HTTP error.
+
+```text
+GET /v1/connections?from=Lausanne&to=NotARealStopXYZ&limit=1
+-> HTTP 200
+{"connections": [], "from": null, "to": null, "stations": {"from": [], "to": []}}
+```
+
+- **HTTP 200 with nulls.** `raise_for_status()` will never catch this. A client that only checks
+  the status code reports "no connections" for a typo, which is the worst possible answer for an
+  LLM: plausible, confident and wrong.
+- ⚠️ **It does not say which side failed.** Probed with a valid `from=Lausanne` and a bogus `to`:
+  `from`, `to` and *both* `stations` lists still came back null/empty. The response carries no
+  signal about which of the two names was the bad one.
+- `stations.from` / `stations.to` were empty in both probes, so they are not a source of
+  candidates either.
+
+**Design consequence.** To name the offending stop, the client has to resolve each side itself via
+`/locations` and see which one has no exact match — up to two extra calls, on the error path only.
+That is what `clients/transport.py` does, and it is also what makes the suggestions in
+`StopNotFoundError` possible.
+
+**The discriminator between "bad name" and "no service":** on a successful search `from` and `to`
+are populated (probe: `from.name == "Lausanne"`, `to.name == "Leysin-Feydey"`). So:
+
+| `from`/`to` | `connections` | Meaning |
+| --- | --- | --- |
+| populated | non-empty | normal answer |
+| populated | `[]` | **no service** at that time — a real answer, not an error |
+| `null` | `[]` | a stop could not be resolved — find out which, then `StopNotFoundError` |
+
+> **`/connections` is more forgiving than it looks.** Live check on 2026-09-25:
+> `to=Leysin Feydey` (the real stop is hyphenated) **routed fine** rather than failing. So the
+> unknown-stop path is reached only by genuinely unresolvable names, not by ordinary misspellings.
+> Good for users; it does mean the error path is rarer than the tests might suggest.
+
+### 3.7 Category codes seen in live responses
+
+`category` is an open vocabulary and the docs do not enumerate it, so `domain/transport.py` maps
+only codes we have actually observed and lets everything else fall through to `mode: "other"` with
+the raw code preserved on `Section.category`. Extend the table from evidence, never from memory.
+
+| Code | Seen as | Mapped to |
+| --- | --- | --- |
+| `R` | regional train, operator SBB | `train` |
+| `IR` | InterRegio, operator SBB | `train` |
+| `CC` | WAB cog railway (§3.3) | `train` |
+| `EV` | rail-replacement bus (§3.2) | `bus` |
+| `PB` | Wengen–Männlichen aerial cableway (§3.3) | `cableway` |
+| `SN` | night service, Lausanne→Aigle | *(unmapped → `other`)* |
+
+> **`journey.number` is not always a line number.** `R` gave `70` and `IR` gave `90`, but `SN`
+> gave `030845` (an internal code) and `EV` gave `EV1`, which already repeats the category. The
+> line label therefore drops the prefix when the number already starts with it, so we print
+> `EV1` rather than `EV EV1`.
 
 ---
 

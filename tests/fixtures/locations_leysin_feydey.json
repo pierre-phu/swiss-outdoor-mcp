@@ -1,0 +1,88 @@
+{
+  "stations": [
+    {
+      "id": "8501482",
+      "name": "Leysin-Feydey",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.344436,
+        "y": 7.008347
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8501974",
+      "name": "Leysin-Feydey, gare",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.344735,
+        "y": 7.008942
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": null,
+      "name": "Leysin, Feydey ",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Transports Publics du Chablais SA - TPC Gare de Leysin-Feydey, Leysin, Av. Léopold de Reynier 13A",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Epicerie du Feydey, Leysin, Avenue Léopold de Reynier 11",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Aromalpes, Leysin, Av. Léopold de Reynier 13A",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Station Rock Café, Leysin, Avenue Léopold de Reynier 11",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

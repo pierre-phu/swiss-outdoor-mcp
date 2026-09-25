@@ -1,19 +1,24 @@
 """Pydantic models for tool inputs, tool outputs and the YAML data files.
 
-Day 1 covers only what `data/` needs. The forecast and connection models arrive with their tools.
+The forecast models arrive with `get_flyability` on day 3.
 """
 
-from datetime import date
+from datetime import date, datetime, time
 from typing import Annotated, Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
 
 __all__ = [
     "CompassSector",
+    "Connection",
+    "ConnectionQuery",
     "EmissionFactor",
     "EmissionFactorsFile",
+    "Section",
+    "SectionMode",
     "Site",
     "SitesFile",
+    "Station",
     "TransportMode",
 ]
 
@@ -28,6 +33,16 @@ CompassSector = Literal[
 """A 16-point compass sector. A launch site's `orientations` list the directions it faces."""
 
 TransportMode = Literal["train", "bus", "car"]
+"""A mode we hold an emission factor for. Unrelated to `SectionMode`."""
+
+SectionMode = Literal["train", "tram", "ship", "bus", "cableway", "walk", "other"]
+"""How one leg of a journey is travelled.
+
+The five vehicle values are the transport API's own documented `transportations` vocabulary
+(`docs/api-notes.md` section 3.2), rather than a set we invented. `walk` is a leg with no vehicle,
+and `other` is the deliberate escape hatch: the API's raw category codes are open-ended, so an
+unrecognised one becomes `other` while `Section.category` keeps the code verbatim.
+"""
 
 
 class _Strict(BaseModel):
@@ -77,6 +92,72 @@ class SitesFile(_Strict):
             if site.id in seen:
                 raise ValueError(f"duplicate site id {site.id!r}")
             seen.add(site.id)
+        return self
+
+
+class Station(_Strict):
+    """A stop as the transport API knows it.
+
+    `id` is `None` for the addresses and points of interest that `/locations` mixes into its
+    results; those are not stops and cannot be routed to (`docs/api-notes.md` section 3.5).
+    """
+
+    id: str | None
+    name: Annotated[str, Field(min_length=1)]
+    lat: float | None = None
+    lon: float | None = None
+
+
+class Section(_Strict):
+    """One leg of a journey: a single vehicle, or a walk between two stops."""
+
+    mode: SectionMode
+    category: str | None = Field(
+        default=None,
+        description="Raw category code from the API, e.g. 'R', 'IR', 'PB'. None on a walking leg.",
+    )
+    line: str | None = Field(
+        default=None,
+        description="Human-readable line, e.g. 'IR 95'. None on a walking leg.",
+    )
+    from_stop: str
+    to_stop: str
+    departure: datetime | None = None
+    arrival: datetime | None = None
+
+
+class Connection(_Strict):
+    """One end-to-end journey option."""
+
+    departure: datetime | None = None
+    arrival: datetime | None = None
+    duration_min: Annotated[int, Field(ge=0)]
+    transfers: Annotated[int, Field(ge=0)]
+    sections: list[Section]
+
+
+class ConnectionQuery(_Strict):
+    """A validated `get_connections` request.
+
+    Carries the SPEC rule that a caller may anchor the search to an arrival time or a departure
+    time, but not both — the API has a single `time` parameter plus an `isArrivalTime` flag, so
+    asking for both is meaningless rather than merely redundant.
+    """
+
+    origin: Annotated[str, Field(min_length=1)]
+    destination: Annotated[str, Field(min_length=1)]
+    date: date
+    arrive_before: time | None = None
+    depart_after: time | None = None
+    limit: Annotated[int, Field(ge=1, le=16)] = 3
+
+    @model_validator(mode="after")
+    def _at_most_one_time_anchor(self) -> Self:
+        if self.arrive_before is not None and self.depart_after is not None:
+            raise ValueError(
+                "Set at most one of arrive_before or depart_after, not both. "
+                "Use arrive_before to be somewhere by a time, depart_after to leave after one."
+            )
         return self
 
 
