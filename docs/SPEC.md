@@ -36,7 +36,10 @@ with its run. Full rule and the probe behind it: `docs/api-notes.md` §2.5–§2
 - `max_wind_kmh = 20`, `max_gust_kmh = 30`, `max_precip_mm_h = 0.1`
 - `direction_tolerance_deg = 45` (wind must come from within ±45° of one of the launch orientations;
   handle circular wrap, e.g. 350° vs 10°)
-- `window = 10:00–17:00 Europe/Zurich`, `min_consecutive_hours = 3`
+- `window = 10:00–17:00 Europe/Zurich`, both ends included (8 hourly steps),
+  `min_consecutive_hours = 3`
+- Every limit is inclusive ("at most"). `wind_direction_10m` is where the wind comes *from*
+  (`docs/api-notes.md` §2.2), so it is compared directly with the sectors the launch faces.
 
 Computation (pure function `compute_flyability`):
 - Per member and hour: flyable if all criteria hold.
@@ -45,7 +48,10 @@ Computation (pure function `compute_flyability`):
 - Day-level `p_flyable`: share of members with ≥ `min_consecutive_hours` consecutive flyable hours in the window.
 - `wind_kmh`: median, p10, p90 over members, per hour.
 
-`Flyability` also includes: `site_id`, `date`, `criteria`, `n_members`, `model`, `generated_at`, `disclaimer`.
+`Flyability` also includes: `site_id`, `date`, `criteria`, `n_members`, `model`, `generated_at`, `disclaimer`,
+`method` (the rule above in one sentence), `attribution` (required by Open-Meteo's CC BY 4.0
+licence, `docs/api-notes.md` §2.4) and `grid_elevation_m` (the model cell's terrain height, which
+can be far from the launch altitude).
 `model` is the id that answered (`icon_d2_eps` or `icon_eu_eps`), so the user can tell a 2 km
 answer from a 13 km one; `n_members` counts that model's members only (20 vs 40) — the two
 ensembles are never pooled.
