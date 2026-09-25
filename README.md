@@ -13,9 +13,69 @@ ensemble-based flyability probabilities, train connections — and the LLM compo
 
 ## Status
 
-Work in progress (day 3 of a 5-day build). Working today: `list_sites`, `get_flyability` and
-`get_connections`. Still to come: `estimate_trip_co2`, offline fixture mode and the eval harness.
-See [`docs/SPEC.md`](docs/SPEC.md).
+Work in progress towards v0.1; the current pre-release is `0.1.0a1`. Working today:
+`list_sites`, `get_flyability` and `get_connections`. Still to come: `estimate_trip_co2`, offline
+fixture mode and the eval harness. See [`docs/SPEC.md`](docs/SPEC.md).
+
+## Example
+
+A real `get_flyability` call for the Fiesch launch (Valais, faces SE–SW, 2163 m), made on
+2026-09-25 for the next day. The `hourly` list is trimmed to its first and last hours; the real
+response has all eight, 10:00 to 17:00.
+
+```json
+{
+  "site_id": "fiesch",
+  "date": "2026-09-26",
+  "p_flyable": 1.0,
+  "hourly": [
+    {
+      "time": "2026-09-26T10:00:00+02:00",
+      "p_wind_ok": 1.0,
+      "p_gust_ok": 1.0,
+      "p_dry": 1.0,
+      "p_direction_ok": 1.0,
+      "p_flyable": 1.0,
+      "wind_kmh": { "median": 1.8, "p10": 1.6, "p90": 2.5 }
+    },
+    {
+      "time": "2026-09-26T17:00:00+02:00",
+      "p_wind_ok": 1.0,
+      "p_gust_ok": 1.0,
+      "p_dry": 1.0,
+      "p_direction_ok": 1.0,
+      "p_flyable": 1.0,
+      "wind_kmh": { "median": 8.6, "p10": 7.4, "p90": 10.8 }
+    }
+  ],
+  "model": "icon_d2_eps",
+  "n_members": 20,
+  "grid_elevation_m": 2173.0,
+  "criteria": {
+    "max_wind_kmh": 20.0,
+    "max_gust_kmh": 30.0,
+    "max_precip_mm_h": 0.1,
+    "direction_tolerance_deg": 45.0,
+    "window_start": "10:00:00",
+    "window_end": "17:00:00",
+    "min_consecutive_hours": 3
+  },
+  "method": "Each of the 20 members of the icon_d2_eps ensemble is checked hour by hour against the criteria (all limits inclusive; wind 10 m above the model's terrain). Hourly p_* values are the share of members meeting each criterion. The day-level p_flyable is the share of members with at least 3 consecutive flyable hours between 10:00 and 17:00 Europe/Zurich, both ends included.",
+  "generated_at": "2026-09-25T16:19:01+02:00",
+  "disclaimer": "Indicator only, computed from a weather-model ensemble. It does not replace pilot judgment, an on-site assessment of conditions, or official aviation weather forecasts.",
+  "attribution": "Weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0."
+}
+```
+
+How to read it:
+
+- `p_flyable: 1.0` means all 20 ensemble members have at least 3 consecutive hours inside the
+  criteria. It is a share of members, not a calibrated probability.
+- `model` says which ensemble answered: the 2 km `icon_d2_eps` (20 members) for today and
+  tomorrow, the 13 km `icon_eu_eps` (40 members) further out.
+- `grid_elevation_m` is the altitude of the model cell. Here it is 10 m from the real launch;
+  on other sites the gap can be hundreds of metres.
+- The LLM client is expected to pass `disclaimer` and `attribution` on to the user.
 
 ## Install and run
 
