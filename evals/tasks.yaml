@@ -1,0 +1,40 @@
+# The five eval tasks from docs/SPEC.md, "Evaluation".
+#
+# Assertions check the tool-call trace, never the prose (vocabulary: evals/assertions.py). The
+# agent is told that today is the offline set's `eval_today`, Friday 2026-09-25, so "Saturday"
+# must resolve to 2026-09-26.
+#
+# When the agent misuses a tool, fix the tool's description or schema, never the assertion.
+tasks:
+  - id: valais-sites
+    prompt: "Which paragliding sites are in Valais?"
+    assertions:
+      - called: {tool: list_sites, with: {region: Valais}}
+
+  - id: flyable-saturday
+    prompt: "Is it flyable on Saturday at Fiesch?"
+    assertions:
+      - called: {tool: get_flyability, with: {site_id: fiesch, date: "2026-09-26"}}
+
+  - id: train-to-site
+    # Berneuse's stop is Leysin-Feydey, which the name gives no hint of: the agent has to read
+    # nearest_stop from list_sites rather than guess.
+    prompt: "How do I get from Lausanne to the Berneuse launch on Saturday morning?"
+    assertions:
+      - called:
+          tool: get_connections
+          with: {origin: Lausanne, destination: Leysin-Feydey, date: "2026-09-26"}
+
+  - id: plan-saturday
+    prompt: "Saturday, from Lausanne, where can I go paragliding by train?"
+    assertions:
+      - order: {tools: [list_sites, get_flyability, get_connections]}
+      - min_calls: {tool: get_flyability, count: 2}
+      - called: {tool: get_flyability, with: {date: "2026-09-26"}}
+      - to_nearest_stop: {tool: get_connections, argument: destination}
+
+  - id: unknown-site-recovery
+    # A plausible but wrong id. Recovery means: the error, then list_sites, then the right id.
+    prompt: "Check flyability for site id 'fiesch-kuehboden' on Saturday."
+    assertions:
+      - recovers: {tool: get_flyability, via: list_sites, with: {site_id: fiesch}}
