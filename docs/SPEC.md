@@ -81,6 +81,14 @@ with actionable messages for the LLM.
 ## Offline / fixture mode
 Clients take an injectable `httpx2` transport. Env var `SWISS_OUTDOOR_OFFLINE=1` makes the server
 serve recorded fixtures (used by evals and the demo GIF, so both are reproducible).
+- Recordings live in `tests/fixtures/offline/`, or wherever `SWISS_OUTDOOR_FIXTURES` points. A
+  `manifest.json` lists them. They are written by `scripts/record_fixtures.py --offline`: every
+  site's ensemble for the fixed window 2026-09-25 to 2026-09-29, Lausanne → every `nearest_stop`
+  on Saturday 2026-09-26, and `/locations` for each of those stops.
+- A request is matched on **place only**: coordinates for the ensemble, `from`/`to` for
+  connections, `query` for locations. Dates, times and limits are ignored.
+- A request with no recording fails with an `UpstreamUnavailableError` that names the request.
+  Offline mode never invents an answer.
 
 ## Evaluation (`evals/`)
 `tasks.yaml`: 5 tasks, each with a user prompt and assertions on the **tool-call trace** (not the prose):

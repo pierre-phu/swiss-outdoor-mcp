@@ -1,0 +1,52 @@
+{
+  "stations": [
+    {
+      "id": "8501288",
+      "name": "Les Pléiades",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.483355,
+        "y": 6.909924
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": null,
+      "name": "Genève, Les Pleïades ",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Les Pléiades, Blonay, Route des Pléiades 31",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Dr méd. Schicker Frédéric, Clarens, Avenue des Pléiades 6",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

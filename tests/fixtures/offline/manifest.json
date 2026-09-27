@@ -1,0 +1,156 @@
+{
+  "recorded_on": "2026-09-27",
+  "window": {
+    "start": "2026-09-25",
+    "end": "2026-09-29"
+  },
+  "eval_today": "2026-09-25",
+  "note": "Replayed by SWISS_OUTDOOR_OFFLINE=1. Matched on place only; dates, times and limits in a request are ignored. Written by scripts/record_fixtures.py --offline.",
+  "recordings": [
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.4833",
+        "longitude": "6.90718"
+      },
+      "file": "ensemble_pleiades.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Les Pléiades"
+      },
+      "file": "connections_lausanne_les-pleiades.json"
+    },
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.4782",
+        "longitude": "6.90986"
+      },
+      "file": "ensemble_lally.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Lally"
+      },
+      "file": "connections_lausanne_lally.json"
+    },
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.4417",
+        "longitude": "6.97593"
+      },
+      "file": "ensemble_jaman.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Jaman"
+      },
+      "file": "connections_lausanne_jaman.json"
+    },
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.3592",
+        "longitude": "7.00272"
+      },
+      "file": "ensemble_berneuse.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Leysin-Feydey"
+      },
+      "file": "connections_lausanne_leysin-feydey.json"
+    },
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.0904",
+        "longitude": "7.25185"
+      },
+      "file": "ensemble_ruinettes.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Verbier, Médran"
+      },
+      "file": "connections_lausanne_verbier-medran.json"
+    },
+    {
+      "endpoint": "/ensemble",
+      "match": {
+        "latitude": "46.4048",
+        "longitude": "8.09598"
+      },
+      "file": "ensemble_fiesch.json"
+    },
+    {
+      "endpoint": "/connections",
+      "match": {
+        "from": "Lausanne",
+        "to": "Fiesch"
+      },
+      "file": "connections_lausanne_fiesch.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Lausanne"
+      },
+      "file": "locations_lausanne.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Les Pléiades"
+      },
+      "file": "locations_les-pleiades.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Lally"
+      },
+      "file": "locations_lally.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Jaman"
+      },
+      "file": "locations_jaman.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Leysin-Feydey"
+      },
+      "file": "locations_leysin-feydey.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Verbier, Médran"
+      },
+      "file": "locations_verbier-medran.json"
+    },
+    {
+      "endpoint": "/locations",
+      "match": {
+        "query": "Fiesch"
+      },
+      "file": "locations_fiesch.json"
+    }
+  ]
+}

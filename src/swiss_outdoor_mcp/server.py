@@ -11,12 +11,14 @@ from datetime import time as time_type
 from functools import wraps
 from typing import Annotated, Any, ParamSpec, TypeVar
 
+import httpx2
 from mcp.server import MCPServer
 from mcp.server.mcpserver.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import Field, ValidationError
 
 from swiss_outdoor_mcp import __version__
+from swiss_outdoor_mcp.clients.offline import fixture_transport, offline_enabled
 from swiss_outdoor_mcp.clients.openmeteo import OpenMeteoClient
 from swiss_outdoor_mcp.clients.transport import TransportClient
 from swiss_outdoor_mcp.data_loader import load_emission_factors, load_sites
@@ -39,19 +41,24 @@ P = ParamSpec("P")
 R = TypeVar("R")
 
 
+def _offline_transport() -> httpx2.AsyncBaseTransport | None:
+    """Recorded responses when `SWISS_OUTDOOR_OFFLINE=1`, else `None` for the real network."""
+    return fixture_transport() if offline_enabled() else None
+
+
 def _transport_client() -> TransportClient:
     """Build the transport client used by the tools.
 
     A single seam, so tests can inject an `httpx2.MockTransport` serving fixtures without the
-    tools taking a transport argument that would leak into their public JSON schema. This is also
-    where `SWISS_OUTDOOR_OFFLINE` will hook in when offline mode lands.
+    tools taking a transport argument that would leak into their public JSON schema. Offline mode
+    hooks in here too.
     """
-    return TransportClient()
+    return TransportClient(transport=_offline_transport())
 
 
 def _weather_client() -> OpenMeteoClient:
     """Build the weather client. Same seam as `_transport_client`, for the same reasons."""
-    return OpenMeteoClient()
+    return OpenMeteoClient(transport=_offline_transport())
 
 
 mcp = MCPServer(

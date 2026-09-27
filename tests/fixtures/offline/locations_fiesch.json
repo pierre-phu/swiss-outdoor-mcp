@@ -1,0 +1,124 @@
+{
+  "stations": [
+    {
+      "id": "8501672",
+      "name": "Fiesch",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.406279,
+        "y": 8.134178
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8501729",
+      "name": "Fiesch Feriendorf",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.397313,
+        "y": 8.13076
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8501646",
+      "name": "Fiesch (Talstation)",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.405992,
+        "y": 8.134057
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": "8579348",
+      "name": "Fiesch, Bahnhof",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.406205,
+        "y": 8.134437
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8578897",
+      "name": "Fiesch, Abzw. Feriendorf",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.398162,
+        "y": 8.133098
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8589089",
+      "name": "Fiesch, Dorf",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.401184,
+        "y": 8.133215
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8589090",
+      "name": "Fiesch, Moos",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.409294,
+        "y": 8.136791
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8512339",
+      "name": "Fiesch, Cheera",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.402491,
+        "y": 8.137224
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8510186",
+      "name": "Fiesch, Schule",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.403334,
+        "y": 8.134699
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8501443",
+      "name": "Fiescheralp",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.413147,
+        "y": 8.103428
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

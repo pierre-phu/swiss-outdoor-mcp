@@ -1,0 +1,3062 @@
+{
+  "connections": [
+    {
+      "from": {
+        "station": {
+          "id": "8592050",
+          "name": "Lausanne, gare",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.5176,
+            "y": 6.629648
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T08:05:00+0200",
+        "departureTimestamp": 1790402700,
+        "delay": null,
+        "platform": null,
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8592050",
+          "name": "Lausanne, gare",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.5176,
+            "y": 6.629648
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T09:39:00+0200",
+        "arrivalTimestamp": 1790408340,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "1",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d01:34:00",
+      "transfers": 2,
+      "service": null,
+      "products": [
+        "EV1",
+        "RE33",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "048027",
+            "category": "EV",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "EV1",
+            "operator": "SBB-EV",
+            "to": "Pully, gare",
+            "passList": [
+              {
+                "station": {
+                  "id": "8592050",
+                  "name": "Lausanne, gare",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.5176,
+                    "y": 6.629648
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T08:05:00+0200",
+                "departureTimestamp": 1790402700,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8592050",
+                  "name": "Lausanne, gare",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.5176,
+                    "y": 6.629648
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8588445",
+                  "name": "Pully, gare",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.510319,
+                    "y": 6.658827
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:15:00+0200",
+                "arrivalTimestamp": 1790403300,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8588445",
+                  "name": "Pully, gare",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.510319,
+                    "y": 6.658827
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8592050",
+              "name": "Lausanne, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.5176,
+                "y": 6.629648
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T08:05:00+0200",
+            "departureTimestamp": 1790402700,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8592050",
+              "name": "Lausanne, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.5176,
+                "y": 6.629648
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8588445",
+              "name": "Pully, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510319,
+                "y": 6.658827
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T08:15:00+0200",
+            "arrivalTimestamp": 1790403300,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8588445",
+              "name": "Pully, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510319,
+                "y": 6.658827
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 180
+          },
+          "departure": {
+            "station": {
+              "id": "8588445",
+              "name": "Pully, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510319,
+                "y": 6.658827
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T08:15:00+0200",
+            "arrivalTimestamp": 1790403300,
+            "departure": "2026-09-26T08:15:00+0200",
+            "departureTimestamp": 1790403300,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8588445",
+              "name": "Pully, gare",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510319,
+                "y": 6.658827
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501121",
+              "name": "Pully",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510926,
+                "y": 6.659456
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T08:18:00+0200",
+            "arrivalTimestamp": 1790403480,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501121",
+              "name": "Pully",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510926,
+                "y": 6.659456
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "030461",
+            "category": "RE",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "33",
+            "operator": "SBB",
+            "to": "Martigny",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501121",
+                  "name": "Pully",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.510926,
+                    "y": 6.659456
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:18:00+0200",
+                "arrivalTimestamp": 1790403480,
+                "departure": "2026-09-26T08:21:00+0200",
+                "departureTimestamp": 1790403660,
+                "delay": null,
+                "platform": "2",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501121",
+                  "name": "Pully",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.510926,
+                    "y": 6.659456
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501122",
+                  "name": "Lutry",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.503786,
+                    "y": 6.690592
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:23:00+0200",
+                "arrivalTimestamp": 1790403780,
+                "departure": "2026-09-26T08:24:00+0200",
+                "departureTimestamp": 1790403840,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501122",
+                  "name": "Lutry",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.503786,
+                    "y": 6.690592
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501123",
+                  "name": "Villette VD",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.49543,
+                    "y": 6.707368
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:26:00+0200",
+                "arrivalTimestamp": 1790403960,
+                "departure": "2026-09-26T08:27:00+0200",
+                "departureTimestamp": 1790404020,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501123",
+                  "name": "Villette VD",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.49543,
+                    "y": 6.707368
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501124",
+                  "name": "Cully",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.488565,
+                    "y": 6.727141
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:29:00+0200",
+                "arrivalTimestamp": 1790404140,
+                "departure": "2026-09-26T08:30:00+0200",
+                "departureTimestamp": 1790404200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501124",
+                  "name": "Cully",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.488565,
+                    "y": 6.727141
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501125",
+                  "name": "Epesses",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.489333,
+                    "y": 6.745157
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:31:00+0200",
+                "arrivalTimestamp": 1790404260,
+                "departure": "2026-09-26T08:32:00+0200",
+                "departureTimestamp": 1790404320,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501125",
+                  "name": "Epesses",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.489333,
+                    "y": 6.745157
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501126",
+                  "name": "Rivaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.474211,
+                    "y": 6.784583
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:34:00+0200",
+                "arrivalTimestamp": 1790404440,
+                "departure": "2026-09-26T08:35:00+0200",
+                "departureTimestamp": 1790404500,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501126",
+                  "name": "Rivaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.474211,
+                    "y": 6.784583
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501127",
+                  "name": "St-Saphorin",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.472591,
+                    "y": 6.797024
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:37:00+0200",
+                "arrivalTimestamp": 1790404620,
+                "departure": "2026-09-26T08:37:00+0200",
+                "departureTimestamp": 1790404620,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501127",
+                  "name": "St-Saphorin",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.472591,
+                    "y": 6.797024
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:42:00+0200",
+                "arrivalTimestamp": 1790404920,
+                "departure": "2026-09-26T08:46:00+0200",
+                "departureTimestamp": 1790405160,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:51:00+0200",
+                "arrivalTimestamp": 1790405460,
+                "departure": "2026-09-26T08:51:00+0200",
+                "departureTimestamp": 1790405460,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501303",
+                  "name": "Villeneuve VD",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.398369,
+                    "y": 6.926992
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:55:00+0200",
+                "arrivalTimestamp": 1790405700,
+                "departure": "2026-09-26T08:56:00+0200",
+                "departureTimestamp": 1790405760,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501303",
+                  "name": "Villeneuve VD",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.398369,
+                    "y": 6.926992
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:02:00+0200",
+                "arrivalTimestamp": 1790406120,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501121",
+              "name": "Pully",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510926,
+                "y": 6.659456
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T08:18:00+0200",
+            "arrivalTimestamp": 1790403480,
+            "departure": "2026-09-26T08:21:00+0200",
+            "departureTimestamp": 1790403660,
+            "delay": null,
+            "platform": "2",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501121",
+              "name": "Pully",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.510926,
+                "y": 6.659456
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:02:00+0200",
+            "arrivalTimestamp": 1790406120,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000330",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "70",
+            "operator": "TPC",
+            "to": "Leysin Grand-Hôtel",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:02:00+0200",
+                "arrivalTimestamp": 1790406120,
+                "departure": "2026-09-26T09:12:00+0200",
+                "departureTimestamp": 1790406720,
+                "delay": null,
+                "platform": "15",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:15:00+0200",
+                "arrivalTimestamp": 1790406900,
+                "departure": "2026-09-26T09:15:00+0200",
+                "departureTimestamp": 1790406900,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:18:00+0200",
+                "arrivalTimestamp": 1790407080,
+                "departure": "2026-09-26T09:18:00+0200",
+                "departureTimestamp": 1790407080,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:20:00+0200",
+                "arrivalTimestamp": 1790407200,
+                "departure": "2026-09-26T09:20:00+0200",
+                "departureTimestamp": 1790407200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:21:00+0200",
+                "arrivalTimestamp": 1790407260,
+                "departure": "2026-09-26T09:21:00+0200",
+                "departureTimestamp": 1790407260,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:28:00+0200",
+                "arrivalTimestamp": 1790407680,
+                "departure": "2026-09-26T09:28:00+0200",
+                "departureTimestamp": 1790407680,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:30:00+0200",
+                "arrivalTimestamp": 1790407800,
+                "departure": "2026-09-26T09:30:00+0200",
+                "departureTimestamp": 1790407800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:34:00+0200",
+                "arrivalTimestamp": 1790408040,
+                "departure": "2026-09-26T09:34:00+0200",
+                "departureTimestamp": 1790408040,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:36:00+0200",
+                "arrivalTimestamp": 1790408160,
+                "departure": "2026-09-26T09:36:00+0200",
+                "departureTimestamp": 1790408160,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:39:00+0200",
+                "arrivalTimestamp": 1790408340,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:02:00+0200",
+            "arrivalTimestamp": 1790406120,
+            "departure": "2026-09-26T09:12:00+0200",
+            "departureTimestamp": 1790406720,
+            "delay": null,
+            "platform": "15",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:39:00+0200",
+            "arrivalTimestamp": 1790408340,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T08:49:00+0200",
+        "departureTimestamp": 1790405340,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T10:19:00+0200",
+        "arrivalTimestamp": 1790410740,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "1",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d01:30:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030811",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T08:49:00+0200",
+                "departureTimestamp": 1790405340,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:04:00+0200",
+                "arrivalTimestamp": 1790406240,
+                "departure": "2026-09-26T09:09:00+0200",
+                "departureTimestamp": 1790406540,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:28:00+0200",
+                "arrivalTimestamp": 1790407680,
+                "departure": "2026-09-26T09:30:00+0200",
+                "departureTimestamp": 1790407800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:36:00+0200",
+                "arrivalTimestamp": 1790408160,
+                "departure": "2026-09-26T09:37:00+0200",
+                "departureTimestamp": 1790408220,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:47:00+0200",
+                "arrivalTimestamp": 1790408820,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T08:49:00+0200",
+            "departureTimestamp": 1790405340,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:47:00+0200",
+            "arrivalTimestamp": 1790408820,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000332",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "70",
+            "operator": "TPC",
+            "to": "Leysin Grand-Hôtel",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:47:00+0200",
+                "arrivalTimestamp": 1790408820,
+                "departure": "2026-09-26T09:52:00+0200",
+                "departureTimestamp": 1790409120,
+                "delay": null,
+                "platform": "15",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:55:00+0200",
+                "arrivalTimestamp": 1790409300,
+                "departure": "2026-09-26T09:55:00+0200",
+                "departureTimestamp": 1790409300,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:58:00+0200",
+                "arrivalTimestamp": 1790409480,
+                "departure": "2026-09-26T09:58:00+0200",
+                "departureTimestamp": 1790409480,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:00:00+0200",
+                "arrivalTimestamp": 1790409600,
+                "departure": "2026-09-26T10:00:00+0200",
+                "departureTimestamp": 1790409600,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:01:00+0200",
+                "arrivalTimestamp": 1790409660,
+                "departure": "2026-09-26T10:01:00+0200",
+                "departureTimestamp": 1790409660,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:08:00+0200",
+                "arrivalTimestamp": 1790410080,
+                "departure": "2026-09-26T10:08:00+0200",
+                "departureTimestamp": 1790410080,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:10:00+0200",
+                "arrivalTimestamp": 1790410200,
+                "departure": "2026-09-26T10:10:00+0200",
+                "departureTimestamp": 1790410200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:14:00+0200",
+                "arrivalTimestamp": 1790410440,
+                "departure": "2026-09-26T10:14:00+0200",
+                "departureTimestamp": 1790410440,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:16:00+0200",
+                "arrivalTimestamp": 1790410560,
+                "departure": "2026-09-26T10:16:00+0200",
+                "departureTimestamp": 1790410560,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:19:00+0200",
+                "arrivalTimestamp": 1790410740,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:47:00+0200",
+            "arrivalTimestamp": 1790408820,
+            "departure": "2026-09-26T09:52:00+0200",
+            "departureTimestamp": 1790409120,
+            "delay": null,
+            "platform": "15",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:19:00+0200",
+            "arrivalTimestamp": 1790410740,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T09:49:00+0200",
+        "departureTimestamp": 1790408940,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T11:19:00+0200",
+        "arrivalTimestamp": 1790414340,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "1",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501482",
+          "name": "Leysin-Feydey",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.344436,
+            "y": 7.008347
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d01:30:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030813",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T09:49:00+0200",
+                "departureTimestamp": 1790408940,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:04:00+0200",
+                "arrivalTimestamp": 1790409840,
+                "departure": "2026-09-26T10:09:00+0200",
+                "departureTimestamp": 1790410140,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:28:00+0200",
+                "arrivalTimestamp": 1790411280,
+                "departure": "2026-09-26T10:30:00+0200",
+                "departureTimestamp": 1790411400,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:36:00+0200",
+                "arrivalTimestamp": 1790411760,
+                "departure": "2026-09-26T10:37:00+0200",
+                "departureTimestamp": 1790411820,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:47:00+0200",
+                "arrivalTimestamp": 1790412420,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T09:49:00+0200",
+            "departureTimestamp": 1790408940,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:47:00+0200",
+            "arrivalTimestamp": 1790412420,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000340",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "70",
+            "operator": "TPC",
+            "to": "Leysin Grand-Hôtel",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:47:00+0200",
+                "arrivalTimestamp": 1790412420,
+                "departure": "2026-09-26T10:52:00+0200",
+                "departureTimestamp": 1790412720,
+                "delay": null,
+                "platform": "15",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:55:00+0200",
+                "arrivalTimestamp": 1790412900,
+                "departure": "2026-09-26T10:55:00+0200",
+                "departureTimestamp": 1790412900,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501554",
+                  "name": "Aigle-Place-du-Marché",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.317235,
+                    "y": 6.970327
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:58:00+0200",
+                "arrivalTimestamp": 1790413080,
+                "departure": "2026-09-26T10:58:00+0200",
+                "departureTimestamp": 1790413080,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501484",
+                  "name": "Aigle-Dépôt",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.31829,
+                    "y": 6.975355
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:00:00+0200",
+                "arrivalTimestamp": 1790413200,
+                "departure": "2026-09-26T11:00:00+0200",
+                "departureTimestamp": 1790413200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501485",
+                  "name": "Fontanney",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.318318,
+                    "y": 6.982288
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:01:00+0200",
+                "arrivalTimestamp": 1790413260,
+                "departure": "2026-09-26T11:01:00+0200",
+                "departureTimestamp": 1790413260,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501179",
+                  "name": "Pont-de-Drapel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.327396,
+                    "y": 7.000872
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:08:00+0200",
+                "arrivalTimestamp": 1790413680,
+                "departure": "2026-09-26T11:08:00+0200",
+                "departureTimestamp": 1790413680,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501480",
+                  "name": "Rennaz (Leysin)",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.335762,
+                    "y": 7.000753
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:10:00+0200",
+                "arrivalTimestamp": 1790413800,
+                "departure": "2026-09-26T11:10:00+0200",
+                "departureTimestamp": 1790413800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501199",
+                  "name": "La Roulaz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.337449,
+                    "y": 7.004415
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:14:00+0200",
+                "arrivalTimestamp": 1790414040,
+                "departure": "2026-09-26T11:14:00+0200",
+                "departureTimestamp": 1790414040,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501481",
+                  "name": "Leysin-Village",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.339254,
+                    "y": 7.006037
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:16:00+0200",
+                "arrivalTimestamp": 1790414160,
+                "departure": "2026-09-26T11:16:00+0200",
+                "departureTimestamp": 1790414160,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501725",
+                  "name": "Versmont",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.341417,
+                    "y": 7.006929
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:19:00+0200",
+                "arrivalTimestamp": 1790414340,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501482",
+                  "name": "Leysin-Feydey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.344436,
+                    "y": 7.008347
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:47:00+0200",
+            "arrivalTimestamp": 1790412420,
+            "departure": "2026-09-26T10:52:00+0200",
+            "departureTimestamp": 1790412720,
+            "delay": null,
+            "platform": "15",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501400",
+              "name": "Aigle",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.316856,
+                "y": 6.96367
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:19:00+0200",
+            "arrivalTimestamp": 1790414340,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501482",
+              "name": "Leysin-Feydey",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.344436,
+                "y": 7.008347
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "from": {
+    "id": "8501120",
+    "name": "Lausanne",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.516795,
+      "y": 6.629087
+    },
+    "distance": null
+  },
+  "to": {
+    "id": "8501482",
+    "name": "Leysin-Feydey",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.344436,
+      "y": 7.008347
+    },
+    "distance": null
+  },
+  "stations": {
+    "from": [
+      {
+        "id": "8501120",
+        "name": "Lausanne",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.516795,
+          "y": 6.629087
+        },
+        "distance": null
+      }
+    ],
+    "to": [
+      {
+        "id": "8501482",
+        "name": "Leysin-Feydey",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.344436,
+          "y": 7.008347
+        },
+        "distance": null
+      }
+    ]
+  }
+}
