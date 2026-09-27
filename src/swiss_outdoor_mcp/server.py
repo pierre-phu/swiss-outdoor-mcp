@@ -19,11 +19,13 @@ from pydantic import Field, ValidationError
 from swiss_outdoor_mcp import __version__
 from swiss_outdoor_mcp.clients.openmeteo import OpenMeteoClient
 from swiss_outdoor_mcp.clients.transport import TransportClient
-from swiss_outdoor_mcp.data_loader import load_sites
+from swiss_outdoor_mcp.data_loader import load_emission_factors, load_sites
+from swiss_outdoor_mcp.domain.co2 import estimate_co2
 from swiss_outdoor_mcp.domain.flyability import ZURICH, compute_flyability
 from swiss_outdoor_mcp.domain.sites import filter_sites, get_site
 from swiss_outdoor_mcp.errors import SwissOutdoorError
 from swiss_outdoor_mcp.models import (
+    Co2Estimate,
     Connection,
     ConnectionQuery,
     Flyability,
@@ -182,3 +184,26 @@ async def get_connections(
     )
     async with _transport_client() as client:
         return await client.find_connections(query)
+
+
+@mcp.tool(annotations=ToolAnnotations(read_only_hint=True, idempotent_hint=True))
+@tool_errors
+async def estimate_trip_co2(
+    origin: Annotated[
+        str, Field(description="Departure stop, exactly as the timetable spells it.")
+    ],
+    destination: Annotated[
+        str, Field(description="Arrival stop. For a launch site, use its nearest_stop.")
+    ],
+) -> Co2Estimate:
+    """Estimate the one-way CO2e per passenger of a trip between two Swiss stops, by mode.
+
+    Compares train, bus (coach or PostBus), average public transport and car over the same
+    distance: the straight line between the stops times a detour factor. An order-of-magnitude
+    comparison, not a route-exact footprint; say so, and cite `factor_source`, when you use it.
+    Double the figures for a return trip.
+    """
+    async with _transport_client() as client:
+        start = await client.resolve_stop(origin)
+        end = await client.resolve_stop(destination)
+    return estimate_co2(start, end, load_emission_factors())

@@ -1,27 +1,33 @@
 # Greenhouse-gas emission factors per passenger-km (life cycle: operation, energy supply,
-# vehicle and infrastructure), Swiss conditions.
+# maintenance, vehicle and infrastructure), Swiss conditions, GWP100, g CO2-eq.
 #
-# Primary source: mobitool-Faktoren v3.0 (mobitool, 2023), Excel database.
-# Values below are as reported in Table B.1 of Sticher, Wallimann & Balthasar (2024),
-# "How (Not) to Incentivize Sustainable Mobility?", HSLU, arXiv:2409.11142, which cites
-# mobitool-Faktoren v3.0. TODO: confirm each row against the mobitool Excel and, if needed,
-# pick the more specific row (e.g. regional bus / PostBus instead of generic bus).
+# Chosen by Pierre on 2026-09-27 from the SuisseEnergie transport calculator
+# (https://www.suisseenergie.ch/calculateur-environnemental-transport/), whose stated data basis
+# is "Facteurs mobitool v3.1":
+#   https://assets.ctfassets.net/4y40wxcxzkmz/oVkB45ifGfz5X44f5Omb1/9d3ef33605fb6154d61d7630536c3a92/mobitool-Faktoren-v3.1-20250408.xlsx
+# Each value below is the "sum" column of the row quoted beside it, sheet
+# "mobitool-Faktoren-v3.1", read on 2026-09-27. Details in docs/api-notes.md section 4.
 factors:
   train:
-    value_kg_per_pkm: 0.0070   # "Rapid transit railway, regional train, train": 7.0 g
-    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
-    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
-    retrieved_on: 2026-09-24
+    value_kg_per_pkm: 0.0070   # Train Switzerland, "Average regional & long-distance traffic": 7.0 g
+    source_name: "mobitool-Faktoren v3.1 (2025-04-08), via SuisseEnergie"
+    source_url: "https://www.suisseenergie.ch/calculateur-environnemental-transport/"
+    retrieved_on: 2026-09-27
   bus:
-    value_kg_per_pkm: 0.1338   # "Bus": 133.8 g - likely an urban-bus average, check vs PostBus
-    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
-    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
-    retrieved_on: 2026-09-24
+    # Coach bus, diesel, single deck (EURO-6, 2020): 46.5 g. Pierre's pick for coach and PostBus.
+    # Assumes 21 of 55 seats taken; mobitool's 13 m city bus (10 of 64) is 133.8 g.
+    value_kg_per_pkm: 0.0465
+    source_name: "mobitool-Faktoren v3.1 (2025-04-08), via SuisseEnergie"
+    source_url: "https://www.suisseenergie.ch/calculateur-environnemental-transport/"
+    retrieved_on: 2026-09-27
+  public_transport:
+    value_kg_per_pkm: 0.0254   # "Average public transport" (Swiss mix of all modes): 25.4 g
+    source_name: "mobitool-Faktoren v3.1 (2025-04-08), via SuisseEnergie"
+    source_url: "https://www.suisseenergie.ch/calculateur-environnemental-transport/"
+    retrieved_on: 2026-09-27
   car:
-    value_kg_per_pkm: 0.1864   # "Car, other" (fleet average): 186.4 g
-    source_name: "mobitool-Faktoren v3.0 (via Sticher et al. 2024, Table B.1)"
-    source_url: "https://www.mobitool.ch/de/tools/mobitool-faktoren-v3-0-25.html"
-    retrieved_on: 2026-09-24
-  # Optional, useful for mountain access (not in the v0.1 SPEC):
-  # cable_car:
-  #   value_kg_per_pkm: 0.0428  # "Cable car, subway, tramway": 42.8 g
+    # Passenger car, "fleet average": 186.4 g per passenger at 1.6 occupants.
+    value_kg_per_pkm: 0.1864
+    source_name: "mobitool-Faktoren v3.1 (2025-04-08), via SuisseEnergie"
+    source_url: "https://www.suisseenergie.ch/calculateur-environnemental-transport/"
+    retrieved_on: 2026-09-27

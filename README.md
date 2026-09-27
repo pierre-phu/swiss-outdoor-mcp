@@ -14,7 +14,7 @@ ensemble-based flyability probabilities, train connections — and the LLM compo
 ## Status
 
 Work in progress towards v0.1; the current pre-release is `0.1.0a1`. Working today:
-`list_sites`, `get_flyability` and `get_connections`. Still to come: `estimate_trip_co2`, offline
+`list_sites`, `get_flyability`, `get_connections` and `estimate_trip_co2`. Still to come: offline
 fixture mode and the eval harness. See [`docs/SPEC.md`](docs/SPEC.md).
 
 ## Example
@@ -106,6 +106,8 @@ weather model; it does not replace pilot judgment, a site briefing, or official 
   1 km/h breeze from the wrong side fails it.
 - The forecast reaches about **four days out**. The exact horizon moves with each model run and
   is read from every response.
+- **CO2 figures are estimates.** One distance serves every mode: the straight line between the
+  stops times 1.3. The real road or rail route can be longer or shorter.
 - The sites' `access_notes` (the last leg from the stop to the launch) are not filled in yet.
 
 ## Data sources
@@ -114,6 +116,8 @@ weather model; it does not replace pilot judgment, a site briefing, or official 
   [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 - Public transport: [transport.opendata.ch](https://transport.opendata.ch) (an unofficial API over
   the Swiss timetable; its terms of use are not stated — see `docs/api-notes.md`).
+- Emission factors: [mobitool-Faktoren v3.1](https://www.mobitool.ch/), as used by the
+  [SuisseEnergie transport calculator](https://www.suisseenergie.ch/calculateur-environnemental-transport/).
 
 ## Licence
 

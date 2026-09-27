@@ -66,8 +66,11 @@ Errors: unknown stop (suggest close matches if the API provides them), upstream 
 
 ### 4. `estimate_trip_co2(origin: str, destination: str) -> Co2Estimate`
 Method: geocode both stops via the transport API, haversine distance × `detour_factor`
-(default 1.3, documented assumption). `by_mode`: kg CO2e for train, bus, car.
-`Co2Estimate`: `distance_km`, `method`, `detour_factor`, `by_mode`, `factor_source`.
+(default 1.3, documented assumption). `by_mode`: kg CO2e per passenger, one way, for train,
+bus (coach and PostBus), public_transport (Swiss average over all public modes) and car.
+Stops are matched by exact name, as in `get_connections`, and a near miss suggests close matches.
+`Co2Estimate`: `origin`, `destination`, `straight_line_km`, `detour_factor`, `distance_km`, `by_mode`,
+`factors_kg_per_pkm`, `method`, `factor_source`.
 Factors from `data/emission_factors.yaml`: `value_kg_per_pkm`, `source_name`, `source_url`, `retrieved_on`.
 
 ## Errors

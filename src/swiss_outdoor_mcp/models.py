@@ -1,11 +1,12 @@
 """Pydantic models for tool inputs, tool outputs and the YAML data files."""
 
 from datetime import date, datetime, time
-from typing import Annotated, Literal, Self
+from typing import Annotated, Literal, Self, get_args
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl, model_validator
 
 __all__ = [
+    "Co2Estimate",
     "CompassSector",
     "Connection",
     "ConnectionQuery",
@@ -34,8 +35,11 @@ CompassSector = Literal[
 # fmt: on
 """A 16-point compass sector. A launch site's `orientations` list the directions it faces."""
 
-TransportMode = Literal["train", "bus", "car"]
-"""A mode we hold an emission factor for. Unrelated to `SectionMode`."""
+TransportMode = Literal["train", "bus", "public_transport", "car"]
+"""A mode we hold an emission factor for. Unrelated to `SectionMode`.
+
+`public_transport` is the Swiss average over every public mode, for a journey that mixes them.
+"""
 
 SectionMode = Literal["train", "tram", "ship", "bus", "cableway", "walk", "other"]
 """How one leg of a journey is travelled.
@@ -279,3 +283,28 @@ class EmissionFactorsFile(_Strict):
     """Top level of `data/emission_factors.yaml`: one factor per transport mode."""
 
     factors: dict[TransportMode, EmissionFactor]
+
+    @model_validator(mode="after")
+    def _every_mode_has_a_factor(self) -> Self:
+        missing = sorted(set(get_args(TransportMode)) - set(self.factors))
+        if missing:
+            raise ValueError(f"no emission factor for {', '.join(missing)}")
+        return self
+
+
+class Co2Estimate(_Strict):
+    """The answer of `estimate_trip_co2`: one distance, priced in every transport mode."""
+
+    origin: str = Field(description="The origin stop as the timetable names it.")
+    destination: str = Field(description="The destination stop as the timetable names it.")
+    straight_line_km: Annotated[float, Field(ge=0)]
+    detour_factor: Annotated[float, Field(ge=1)]
+    distance_km: Annotated[
+        float, Field(ge=0, description="straight_line_km times detour_factor, for every mode.")
+    ]
+    by_mode: dict[TransportMode, Annotated[float, Field(ge=0)]] = Field(
+        description="kg CO2e per passenger for the whole trip, one way."
+    )
+    factors_kg_per_pkm: dict[TransportMode, Annotated[float, Field(ge=0)]]
+    method: str
+    factor_source: str

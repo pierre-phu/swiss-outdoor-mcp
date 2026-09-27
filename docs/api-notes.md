@@ -2,7 +2,7 @@
 
 Every statement here was checked against the source linked next to it, on **2026-09-23**.
 §2.5, §2.6 and §3.5 were added on **2026-09-24**; §3.6, §3.7, the two SDK notes at the end of
-§1.4 and the wind-direction convention in §2.2 on **2026-09-25**.
+§1.4 and the wind-direction convention in §2.2 on **2026-09-25**; §4 on **2026-09-27**.
 Anything that could not be confirmed is in [UNVERIFIED](#unverified) at the bottom — never build
 on those without checking first.
 
@@ -507,6 +507,32 @@ the raw code preserved on `Section.category`. Extend the table from evidence, ne
 > gave `030845` (an internal code) and `EV` gave `EV1`, which already repeats the category. The
 > line label therefore drops the prefix when the number already starts with it, so we print
 > `EV1` rather than `EV EV1`.
+
+## 4. Emission factors (mobitool v3.1)
+
+Values chosen by Pierre on 2026-09-27 from the SuisseEnergie transport calculator
+(<https://www.suisseenergie.ch/calculateur-environnemental-transport/>). The calculator is
+rendered client-side, so its numbers cannot be read from the page, but the page names its data
+basis, "Facteurs mobitool v3.1", and links the spreadsheet:
+<https://assets.ctfassets.net/4y40wxcxzkmz/oVkB45ifGfz5X44f5Omb1/9d3ef33605fb6154d61d7630536c3a92/mobitool-Faktoren-v3.1-20250408.xlsx>.
+
+Read from sheet `mobitool-Faktoren-v3.1`, indicator GWP100a, unit g CO2-eq. per pkm. The `sum`
+column is the life cycle: direct, non-exhaust, energy chain, maintenance, vehicle, end of life
+and road (infrastructure).
+
+| Our mode | mobitool row | Load assumed | g CO2e/pkm | Pierre's figure |
+| --- | --- | --- | --- | --- |
+| `train` | Rail / Train Switzerland / Average regional & long-distance traffic | 29.3 % | 7.0 | 7 |
+| `public_transport` | Public transport / Average public transport | – | 25.4 | 25 |
+| `bus` | Road / Coach bus / Diesel / Single deck, EURO-6, 2020 | 21 of 55 | 46.5 | 46 |
+| `car` | Road / Passenger car / fleet average / fleet average | 1.6 persons | 186.4 | 187 |
+
+- `emission_factors.yaml` stores the spreadsheet values to one decimal, not the rounded
+  figures, so each number matches the row it cites.
+- **Coach, not city bus.** mobitool's 13 m diesel city bus is 133.8 g at 10 of 64 seats,
+  nearly three times the coach. Mapping PostBus to the coach row is Pierre's call.
+- Train and car are unchanged from mobitool v3.0, which the file used before. Checked against
+  Sticher et al. (2024), Table B.1.
 
 ---
 
