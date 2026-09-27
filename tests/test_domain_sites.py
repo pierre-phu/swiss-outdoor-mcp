@@ -8,7 +8,7 @@ import pytest
 
 from swiss_outdoor_mcp.data_loader import load_sites
 from swiss_outdoor_mcp.domain.sites import filter_sites, get_site
-from swiss_outdoor_mcp.errors import SiteNotFoundError
+from swiss_outdoor_mcp.errors import SiteNotFoundError, UnknownOrientationError
 from swiss_outdoor_mcp.models import Site
 
 
@@ -52,6 +52,17 @@ def test_filters_by_orientation() -> None:
 def test_orientation_is_exact_not_widened() -> None:
     """'SW' must not match a site that only faces 'S'; widening is get_flyability's job."""
     assert [site.id for site in filter_sites(SITES, orientation="SW")] == ["alpha"]
+
+
+def test_orientation_is_case_insensitive() -> None:
+    assert [site.id for site in filter_sites(SITES, orientation=" sw ")] == ["alpha"]
+
+
+@pytest.mark.parametrize("orientation", ["south", "SouthWest", "225", "S-W"])
+def test_an_orientation_that_is_not_a_sector_is_refused(orientation: str) -> None:
+    """An empty list here would read as "no launch faces that way"."""
+    with pytest.raises(UnknownOrientationError, match="16-point compass sector: N, NNE"):
+        filter_sites(SITES, orientation=orientation)
 
 
 def test_filters_combine() -> None:

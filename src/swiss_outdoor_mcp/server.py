@@ -116,7 +116,10 @@ async def list_sites(
         str | None,
         Field(
             default=None,
-            description="Compass sector the launch faces, e.g. 'SW'. 16-point, case-insensitive.",
+            description=(
+                "Compass sector the launch faces, case-insensitive: one of N, NNE, NE, ENE, E, "
+                "ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW."
+            ),
         ),
     ] = None,
 ) -> list[Site]:

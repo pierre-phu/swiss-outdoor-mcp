@@ -75,7 +75,8 @@ Factors from `data/emission_factors.yaml`: `value_kg_per_pkm`, `source_name`, `s
 
 ## Errors
 Domain exceptions in `errors.py` (`SiteNotFoundError`, `StopNotFoundError`, `DateOutOfRangeError`,
-`UpstreamUnavailableError`), mapped by `server.py` to MCP tool errors (mechanism to verify in the SDK)
+`UpstreamUnavailableError`, and `UnknownOrientationError` for a `list_sites` orientation that is not
+one of the 16 sectors), mapped by `server.py` to MCP tool errors (mechanism to verify in the SDK)
 with actionable messages for the LLM.
 
 ## Offline / fixture mode
