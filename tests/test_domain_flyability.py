@@ -288,6 +288,14 @@ class TestOutputCarriesItsAssumptions:
         assert "Open-Meteo" in result.attribution
         assert "3 consecutive" in result.method
 
+    def test_names_the_weekday_so_a_wrong_saturday_shows(self) -> None:
+        """2026-09-26 is a Saturday; an agent that asked for the 27th would read 'Sunday'."""
+        result = compute_flyability(
+            forecast(member()), site(), DAY, FlyabilityCriteria(), generated_at=GENERATED_AT
+        )
+
+        assert result.weekday == "Saturday"
+
     def test_stricter_criteria_lower_the_score(self) -> None:
         breezy = [member(speed=float(speed)) for speed in range(8, 28)]
 

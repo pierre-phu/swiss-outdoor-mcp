@@ -48,7 +48,8 @@ Computation (pure function `compute_flyability`):
 - Day-level `p_flyable`: share of members with ≥ `min_consecutive_hours` consecutive flyable hours in the window.
 - `wind_kmh`: median, p10, p90 over members, per hour.
 
-`Flyability` also includes: `site_id`, `date`, `criteria`, `n_members`, `model`, `generated_at`, `disclaimer`,
+`Flyability` also includes: `site_id`, `date`, `weekday` (so a mis-resolved "Saturday" is visible),
+`criteria`, `n_members`, `model`, `generated_at`, `disclaimer`,
 `method` (the rule above in one sentence), `attribution` (required by Open-Meteo's CC BY 4.0
 licence, `docs/api-notes.md` §2.4) and `grid_elevation_m` (the model cell's terrain height, which
 can be far from the launch altitude).

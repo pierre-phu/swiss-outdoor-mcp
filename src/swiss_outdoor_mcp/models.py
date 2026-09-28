@@ -245,6 +245,12 @@ class Flyability(_Strict):
 
     site_id: str
     date: date
+    weekday: str = Field(
+        description=(
+            "Day of the week of `date`, in English. Check it against the day the user asked "
+            "about: 'Saturday' resolved to the wrong date shows up here."
+        )
+    )
     p_flyable: Probability = Field(
         description=(
             "Share of ensemble members with at least min_consecutive_hours consecutive "

@@ -67,7 +67,10 @@ mcp = MCPServer(
     instructions=(
         "Deterministic facts for planning Swiss mountain outings by public transport. "
         "Compose the tools yourself: the server never calls a model and never decides for you. "
-        "Always relay the disclaimer that comes with any flyability result."
+        "To suggest where to fly on a given day: list_sites, then get_flyability for the "
+        "candidate sites on that date, then get_connections only to the nearest_stop of the one "
+        "or two best sites. The timetable API states no rate limit, so do not look up every "
+        "site. Always relay the disclaimer that comes with any flyability result."
     ),
 )
 
@@ -124,6 +127,10 @@ async def list_sites(
     ] = None,
 ) -> list[Site]:
     """List the paragliding launch sites this server knows, optionally filtered.
+
+    This is the catalogue only and says nothing about the weather. To answer where someone can
+    fly on a given day, check the candidate sites with get_flyability for that date, then look
+    up get_connections to the nearest_stop of the flyable ones.
 
     Use the returned `id` for get_flyability, and the returned `nearest_stop` as the destination
     for get_connections. `access_notes` covers the last leg from that stop, which the timetable
