@@ -1,0 +1,124 @@
+{
+  "stations": [
+    {
+      "id": "8501120",
+      "name": "Lausanne",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.516795,
+        "y": 6.629087
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8590442",
+      "name": "Lausanne, Riponne-M. Béjart",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.523077,
+        "y": 6.632017
+      },
+      "distance": null,
+      "icon": "tram"
+    },
+    {
+      "id": "8591988",
+      "name": "Lausanne, Bel-Air",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.522292,
+        "y": 6.62907
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": "8592050",
+      "name": "Lausanne, gare",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.5176,
+        "y": 6.629648
+      },
+      "distance": null,
+      "icon": "tram"
+    },
+    {
+      "id": "8501160",
+      "name": "Lausanne-Chauderon",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.523233,
+        "y": 6.626045
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8501166",
+      "name": "Romanel-sur-Lausanne",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.56247,
+        "y": 6.603154
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8501181",
+      "name": "Lausanne-Flon",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.520798,
+        "y": 6.63033
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8579238",
+      "name": "Lausanne, Sallaz",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.532812,
+        "y": 6.646185
+      },
+      "distance": null,
+      "icon": "tram"
+    },
+    {
+      "id": "8591818",
+      "name": "Lausanne, Flon",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.520575,
+        "y": 6.630568
+      },
+      "distance": null,
+      "icon": "tram"
+    },
+    {
+      "id": "8592010",
+      "name": "Lausanne, Chauderon",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.523602,
+        "y": 6.624815
+      },
+      "distance": null,
+      "icon": "bus"
+    }
+  ]
+}

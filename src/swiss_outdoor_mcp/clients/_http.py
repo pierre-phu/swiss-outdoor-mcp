@@ -6,6 +6,7 @@ from typing import Any
 
 import httpx2
 
+from swiss_outdoor_mcp.clients.offline import NoRecordingError
 from swiss_outdoor_mcp.errors import UpstreamUnavailableError
 
 __all__ = ["get_json"]
@@ -26,6 +27,9 @@ async def get_json(
         payload = response.json()
     except httpx2.HTTPStatusError as exc:
         raise UpstreamUnavailableError(service, f"HTTP {exc.response.status_code}") from exc
+    except NoRecordingError as exc:
+        # Offline mode's own miss: its message names the request, which is the useful part.
+        raise UpstreamUnavailableError(service, str(exc)) from exc
     except httpx2.TimeoutException as exc:
         raise UpstreamUnavailableError(service, "timed out") from exc
     except httpx2.HTTPError as exc:

@@ -2,7 +2,8 @@
 
 Every statement here was checked against the source linked next to it, on **2026-09-23**.
 §2.5, §2.6 and §3.5 were added on **2026-09-24**; §3.6, §3.7, the two SDK notes at the end of
-§1.4 and the wind-direction convention in §2.2 on **2026-09-25**.
+§1.4 and the wind-direction convention in §2.2 on **2026-09-25**; §2.7, §3.8 and §4 on
+**2026-09-27**.
 Anything that could not be confirmed is in [UNVERIFIED](#unverified) at the bottom — never build
 on those without checking first.
 
@@ -317,6 +318,25 @@ Decided by Pierre on 2026-09-24. It relies on the mechanics in §2.5.
 
 ---
 
+### 2.7 Past dates via `start_date` / `end_date` *(probe)*
+
+Probed on **2026-09-27** (a Sunday), for the offline fixtures only; the client itself never sends
+these parameters.
+
+```text
+GET /v1/ensemble?latitude=46.4048&longitude=8.09598
+    &hourly=wind_speed_10m,wind_gusts_10m,wind_direction_10m,precipitation
+    &models=icon_d2_eps,icon_eu_eps&start_date=2026-09-25&end_date=2026-09-29
+    &timezone=Europe/Zurich
+```
+
+- The API **accepts a window that starts two days in the past**. The response has the usual
+  shape: 120 hourly steps and 241 keys (60 series × 4 variables + `time`).
+- Both models are non-null for the 2026-09-26 10:00–17:00 window, so the §2.6 rule picks
+  `icon_d2_eps` there. `icon_d2_eps` ends at 2026-09-29 14:00, and `icon_eu_eps` runs to the end.
+- Which model run the past hours come from is **not stated**. That is fine for replayed fixtures,
+  which only need the right shape. It is not a hindcast we could score.
+
 ## 3. transport.opendata.ch
 
 Docs: <https://transport.opendata.ch/docs.html> · Base URL: `https://transport.opendata.ch/v1`
@@ -507,6 +527,44 @@ the raw code preserved on `Section.category`. Extend the table from evidence, ne
 > gave `030845` (an internal code) and `EV` gave `EV1`, which already repeats the category. The
 > line label therefore drops the prefix when the number already starts with it, so we print
 > `EV1` rather than `EV EV1`.
+
+### 3.8 Past dates in `/connections` *(probe)*
+
+Probed on **2026-09-27**: `GET /v1/connections?from=Lausanne&to=Fiesch&date=2026-09-26&time=08:00&limit=3`
+answered normally for the day before. It returned three connections departing 08:20, 08:49 and
+09:20 on 2026-09-26, with `from`/`to` populated. The offline fixtures rely on this, so the evals
+can ask about "Saturday" whatever day they were recorded on.
+
+> On the same day, a run of 13 back-to-back requests had its 13th (`/locations`) dropped with
+> "Server disconnected without sending a response". `scripts/record_fixtures.py` now paces its
+> requests one second apart and retries a transport failure. Another data point for §3.4's
+> unstated limit.
+
+## 4. Emission factors (mobitool v3.1)
+
+Values chosen by Pierre on 2026-09-27 from the SuisseEnergie transport calculator
+(<https://www.suisseenergie.ch/calculateur-environnemental-transport/>). The calculator is
+rendered client-side, so its numbers cannot be read from the page, but the page names its data
+basis, "Facteurs mobitool v3.1", and links the spreadsheet:
+<https://assets.ctfassets.net/4y40wxcxzkmz/oVkB45ifGfz5X44f5Omb1/9d3ef33605fb6154d61d7630536c3a92/mobitool-Faktoren-v3.1-20250408.xlsx>.
+
+Read from sheet `mobitool-Faktoren-v3.1`, indicator GWP100a, unit g CO2-eq. per pkm. The `sum`
+column is the life cycle: direct, non-exhaust, energy chain, maintenance, vehicle, end of life
+and road (infrastructure).
+
+| Our mode | mobitool row | Load assumed | g CO2e/pkm | Pierre's figure |
+| --- | --- | --- | --- | --- |
+| `train` | Rail / Train Switzerland / Average regional & long-distance traffic | 29.3 % | 7.0 | 7 |
+| `public_transport` | Public transport / Average public transport | – | 25.4 | 25 |
+| `bus` | Road / Coach bus / Diesel / Single deck, EURO-6, 2020 | 21 of 55 | 46.5 | 46 |
+| `car` | Road / Passenger car / fleet average / fleet average | 1.6 persons | 186.4 | 187 |
+
+- `emission_factors.yaml` stores the spreadsheet values to one decimal, not the rounded
+  figures, so each number matches the row it cites.
+- **Coach, not city bus.** mobitool's 13 m diesel city bus is 133.8 g at 10 of 64 seats,
+  nearly three times the coach. Mapping PostBus to the coach row is Pierre's call.
+- Train and car are unchanged from mobitool v3.0, which the file used before. Checked against
+  Sticher et al. (2024), Table B.1.
 
 ---
 

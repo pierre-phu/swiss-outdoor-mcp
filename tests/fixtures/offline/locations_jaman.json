@@ -1,0 +1,124 @@
+{
+  "stations": [
+    {
+      "id": "8501367",
+      "name": "Jaman",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.44134,
+        "y": 6.976777
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": "8579197",
+      "name": "Clarens, Jaman",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.441612,
+        "y": 6.894051
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": null,
+      "name": "JAMAN TITULAIRE MOREAU, Vevey, Rue du Simplon 5",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Unité Hospitalière Jaman - Fondation de Nant, La Tour-de-Peilz, Avenue de Sully 2",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "JaMan Creative Performance, Widnau, Gartenstr. 32a",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "JaMan Creative Performance GmbH, Widnau, Gartenstr. 32a",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Jamans Orthopädie-Technik, Aarau, Rathausgasse 3",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Jamans, Helmut und Renée (-Freymond), Burgdorf, Fischermätteli 15",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Dr Dafflon Michel, Clarens, Rue de Jaman 1",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Dr méd. Cailleteau Benoit, La Tour-de-Peilz, Avenue de Jaman 21",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

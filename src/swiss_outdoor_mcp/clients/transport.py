@@ -83,6 +83,23 @@ class TransportClient:
             stations = [station for station in stations if station.id]
         return stations
 
+    async def resolve_stop(self, name: str) -> Station:
+        """Return the stop with exactly this name (ignoring case), with its coordinates.
+
+        Exact match rather than `stations[0]`: three of our own site stops lose to a longer
+        name on a prefix search (`docs/api-notes.md` section 3.5). A near miss raises
+        `StopNotFoundError` with the closest names, as `find_connections` does.
+        """
+        matches = await self.search_locations(name)
+        for station in matches:
+            if station.name.casefold() == name.strip().casefold():
+                if station.lat is None or station.lon is None:
+                    raise UpstreamUnavailableError(
+                        SERVICE, f"stop {station.name!r} came back without coordinates"
+                    )
+                return station
+        raise StopNotFoundError(name, suggestions=[s.name for s in matches[:MAX_SUGGESTIONS]])
+
     async def find_connections(self, query: ConnectionQuery) -> list[Connection]:
         """Return journey options, best first.
 

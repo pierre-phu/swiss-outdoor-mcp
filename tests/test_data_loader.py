@@ -40,7 +40,7 @@ def test_packaged_sites_file_loads() -> None:
 def test_packaged_emission_factors_cover_every_mode() -> None:
     factors = load_emission_factors()
 
-    assert set(factors) == {"train", "bus", "car"}
+    assert set(factors) == {"train", "bus", "public_transport", "car"}
 
 
 def test_loads_a_valid_site(tmp_path: Path) -> None:
@@ -118,3 +118,17 @@ factors:
 """
     with pytest.raises(DataFileError):
         load_emission_factors(write(tmp_path, unknown_mode, "emission_factors.yaml"))
+
+
+def test_rejects_a_file_missing_a_mode(tmp_path: Path) -> None:
+    """estimate_trip_co2 prices every mode, so a gap must fail at load time, not in a tool call."""
+    train_only = """
+factors:
+  train:
+    value_kg_per_pkm: 0.03
+    source_name: Somebody
+    source_url: https://example.org/factors
+    retrieved_on: 2026-01-01
+"""
+    with pytest.raises(DataFileError, match="no emission factor for bus, car, public_transport"):
+        load_emission_factors(write(tmp_path, train_only, "emission_factors.yaml"))

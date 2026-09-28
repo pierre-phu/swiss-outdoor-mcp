@@ -1,0 +1,124 @@
+{
+  "stations": [
+    {
+      "id": "8501287",
+      "name": "Lally",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.479209,
+        "y": 6.914014
+      },
+      "distance": null,
+      "icon": "train"
+    },
+    {
+      "id": null,
+      "name": "Blonay, Lally ",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Lally Schabrun, Heidi und Rupert, Meisterschwanden, Oberfeldstr. 16",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Dénéréaz, François, Blonay, Sentier des Pléiades 25",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Restaurant Le 1209, Blonay, Route de Lally 5",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Le 1209 Altitude Gourmande Sàrl, Blonay, Route de Lally 5",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Barral Métraux, Anne-Claude, Blonay, Route de Lally 117",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Benoit, Damien, Sarah, Noé, Jule, Timothé, Sid et Malia (-Barbezat), Blonay, Route de Lally 103",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Carusone, Francesco et Mireille, Blonay, Route de Lally 4",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Caspary, Jacques Michel Olivier, Blonay, Route de Lally 131",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

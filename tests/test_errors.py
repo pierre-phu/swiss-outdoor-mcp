@@ -13,6 +13,7 @@ from swiss_outdoor_mcp.errors import (
     SiteNotFoundError,
     StopNotFoundError,
     SwissOutdoorError,
+    UnknownOrientationError,
     UpstreamUnavailableError,
 )
 
@@ -22,6 +23,13 @@ def test_site_not_found_names_the_recovery_call() -> None:
 
     assert str(error) == "Unknown site_id 'chamonix'. Call list_sites to get valid ids."
     assert error.site_id == "chamonix"
+
+
+def test_unknown_orientation_lists_the_valid_sectors() -> None:
+    error = UnknownOrientationError("south", ["N", "S"])
+
+    assert str(error) == "Unknown orientation 'south'. Use a 16-point compass sector: N, S."
+    assert error.orientation == "south"
 
 
 def test_stop_not_found_offers_suggestions_when_there_are_any() -> None:
@@ -65,6 +73,7 @@ def test_upstream_unavailable_without_detail() -> None:
         StopNotFoundError("x"),
         DateOutOfRangeError(date(2026, 1, 1), date(2026, 1, 2), date(2026, 1, 6)),
         UpstreamUnavailableError("x"),
+        UnknownOrientationError("x", ["N"]),
     ],
 )
 def test_every_domain_error_shares_the_base_class(error: SwissOutdoorError) -> None:

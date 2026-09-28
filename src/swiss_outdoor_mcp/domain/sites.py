@@ -8,9 +8,12 @@ still matching exactly rather than fuzzily, so the result is always explainable.
 from __future__ import annotations
 
 from collections.abc import Iterable
+from typing import get_args
 
-from swiss_outdoor_mcp.errors import SiteNotFoundError
-from swiss_outdoor_mcp.models import Site
+from swiss_outdoor_mcp.errors import SiteNotFoundError, UnknownOrientationError
+from swiss_outdoor_mcp.models import CompassSector, Site
+
+SECTORS: tuple[str, ...] = get_args(CompassSector)
 
 __all__ = ["filter_sites", "get_site"]
 
@@ -24,10 +27,16 @@ def filter_sites(
 
     `region` matches case-insensitively. `orientation` matches when the site faces that compass
     sector, also case-insensitively; it is not widened to neighbouring sectors, because the
-    flyable wind window is the business of `get_flyability`, not of the catalogue.
+    flyable wind window is the business of `get_flyability`, not of the catalogue. An
+    `orientation` that is not a sector raises `UnknownOrientationError`, whereas an unknown
+    region is just an empty result: no sites in Ticino is a fact.
     """
     wanted_region = region.strip().casefold() if region else None
     wanted_orientation = orientation.strip().casefold() if orientation else None
+    if wanted_orientation is not None and wanted_orientation not in {
+        sector.casefold() for sector in SECTORS
+    }:
+        raise UnknownOrientationError(str(orientation), SECTORS)
 
     result: list[Site] = []
     for site in sites:

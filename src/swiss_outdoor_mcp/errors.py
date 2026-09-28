@@ -5,6 +5,7 @@ only module that maps them onto the protocol. Every message is written for an LL
 what went wrong *and* name the tool call that recovers from it.
 """
 
+from collections.abc import Sequence
 from datetime import date
 
 __all__ = [
@@ -12,6 +13,7 @@ __all__ = [
     "SiteNotFoundError",
     "StopNotFoundError",
     "SwissOutdoorError",
+    "UnknownOrientationError",
     "UpstreamUnavailableError",
 ]
 
@@ -26,6 +28,21 @@ class SiteNotFoundError(SwissOutdoorError):
     def __init__(self, site_id: str) -> None:
         super().__init__(f"Unknown site_id {site_id!r}. Call list_sites to get valid ids.")
         self.site_id = site_id
+
+
+class UnknownOrientationError(SwissOutdoorError):
+    """An `orientation` filter that is not a compass sector.
+
+    Without this, "south-west" would filter every site out and the model would report that no
+    launch faces that way.
+    """
+
+    def __init__(self, orientation: str, valid: Sequence[str]) -> None:
+        super().__init__(
+            f"Unknown orientation {orientation!r}. "
+            f"Use a 16-point compass sector: {', '.join(valid)}."
+        )
+        self.orientation = orientation
 
 
 class StopNotFoundError(SwissOutdoorError):

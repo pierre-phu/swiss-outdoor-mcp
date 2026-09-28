@@ -48,7 +48,8 @@ Computation (pure function `compute_flyability`):
 - Day-level `p_flyable`: share of members with ≥ `min_consecutive_hours` consecutive flyable hours in the window.
 - `wind_kmh`: median, p10, p90 over members, per hour.
 
-`Flyability` also includes: `site_id`, `date`, `criteria`, `n_members`, `model`, `generated_at`, `disclaimer`,
+`Flyability` also includes: `site_id`, `date`, `weekday` (so a mis-resolved "Saturday" is visible),
+`criteria`, `n_members`, `model`, `generated_at`, `disclaimer`,
 `method` (the rule above in one sentence), `attribution` (required by Open-Meteo's CC BY 4.0
 licence, `docs/api-notes.md` §2.4) and `grid_elevation_m` (the model cell's terrain height, which
 can be far from the launch altitude).
@@ -66,18 +67,30 @@ Errors: unknown stop (suggest close matches if the API provides them), upstream 
 
 ### 4. `estimate_trip_co2(origin: str, destination: str) -> Co2Estimate`
 Method: geocode both stops via the transport API, haversine distance × `detour_factor`
-(default 1.3, documented assumption). `by_mode`: kg CO2e for train, bus, car.
-`Co2Estimate`: `distance_km`, `method`, `detour_factor`, `by_mode`, `factor_source`.
+(default 1.3, documented assumption). `by_mode`: kg CO2e per passenger, one way, for train,
+bus (coach and PostBus), public_transport (Swiss average over all public modes) and car.
+Stops are matched by exact name, as in `get_connections`, and a near miss suggests close matches.
+`Co2Estimate`: `origin`, `destination`, `straight_line_km`, `detour_factor`, `distance_km`, `by_mode`,
+`factors_kg_per_pkm`, `method`, `factor_source`.
 Factors from `data/emission_factors.yaml`: `value_kg_per_pkm`, `source_name`, `source_url`, `retrieved_on`.
 
 ## Errors
 Domain exceptions in `errors.py` (`SiteNotFoundError`, `StopNotFoundError`, `DateOutOfRangeError`,
-`UpstreamUnavailableError`), mapped by `server.py` to MCP tool errors (mechanism to verify in the SDK)
+`UpstreamUnavailableError`, and `UnknownOrientationError` for a `list_sites` orientation that is not
+one of the 16 sectors), mapped by `server.py` to MCP tool errors (mechanism to verify in the SDK)
 with actionable messages for the LLM.
 
 ## Offline / fixture mode
 Clients take an injectable `httpx2` transport. Env var `SWISS_OUTDOOR_OFFLINE=1` makes the server
 serve recorded fixtures (used by evals and the demo GIF, so both are reproducible).
+- Recordings live in `tests/fixtures/offline/`, or wherever `SWISS_OUTDOOR_FIXTURES` points. A
+  `manifest.json` lists them. They are written by `scripts/record_fixtures.py --offline`: every
+  site's ensemble for the fixed window 2026-09-25 to 2026-09-29, Lausanne → every `nearest_stop`
+  on Saturday 2026-09-26, and `/locations` for each of those stops.
+- A request is matched on **place only**: coordinates for the ensemble, `from`/`to` for
+  connections, `query` for locations. Dates, times and limits are ignored.
+- A request with no recording fails with an `UpstreamUnavailableError` that names the request.
+  Offline mode never invents an answer.
 
 ## Evaluation (`evals/`)
 `tasks.yaml`: 5 tasks, each with a user prompt and assertions on the **tool-call trace** (not the prose):

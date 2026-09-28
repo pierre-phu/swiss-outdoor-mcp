@@ -1,0 +1,3241 @@
+{
+  "connections": [
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T08:20:00+0200",
+        "departureTimestamp": 1790403600,
+        "delay": null,
+        "platform": "4",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T11:22:00+0200",
+        "arrivalTimestamp": 1790414520,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "1",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:02:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 95",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030711",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "95",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T08:20:00+0200",
+                "departureTimestamp": 1790403600,
+                "delay": null,
+                "platform": "4",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T08:37:00+0200",
+                "arrivalTimestamp": 1790404620,
+                "departure": "2026-09-26T08:43:00+0200",
+                "departureTimestamp": 1790404980,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:00:00+0200",
+                "arrivalTimestamp": 1790406000,
+                "departure": "2026-09-26T09:03:00+0200",
+                "departureTimestamp": 1790406180,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:09:00+0200",
+                "arrivalTimestamp": 1790406540,
+                "departure": "2026-09-26T09:10:00+0200",
+                "departureTimestamp": 1790406600,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:20:00+0200",
+                "arrivalTimestamp": 1790407200,
+                "departure": "2026-09-26T09:21:00+0200",
+                "departureTimestamp": 1790407260,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501403",
+                  "name": "St-Maurice",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.216366,
+                    "y": 7.002023
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:30:00+0200",
+                "arrivalTimestamp": 1790407800,
+                "departure": "2026-09-26T09:31:00+0200",
+                "departureTimestamp": 1790407860,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501403",
+                  "name": "St-Maurice",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.216366,
+                    "y": 7.002023
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:41:00+0200",
+                "arrivalTimestamp": 1790408460,
+                "departure": "2026-09-26T09:42:00+0200",
+                "departureTimestamp": 1790408520,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:56:00+0200",
+                "arrivalTimestamp": 1790409360,
+                "departure": "2026-09-26T09:57:00+0200",
+                "departureTimestamp": 1790409420,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:07:00+0200",
+                "arrivalTimestamp": 1790410020,
+                "departure": "2026-09-26T10:08:00+0200",
+                "departureTimestamp": 1790410080,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:23:00+0200",
+                "arrivalTimestamp": 1790410980,
+                "departure": "2026-09-26T10:24:00+0200",
+                "departureTimestamp": 1790411040,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501609",
+                  "name": "Brig",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319416,
+                    "y": 7.988089
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:32:00+0200",
+                "arrivalTimestamp": 1790411520,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "7",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501609",
+                  "name": "Brig",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319416,
+                    "y": 7.988089
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T08:20:00+0200",
+            "departureTimestamp": 1790403600,
+            "delay": null,
+            "platform": "4",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:32:00+0200",
+            "arrivalTimestamp": 1790411520,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "7",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 420
+          },
+          "departure": {
+            "station": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:32:00+0200",
+            "arrivalTimestamp": 1790411520,
+            "departure": "2026-09-26T10:32:00+0200",
+            "departureTimestamp": 1790411520,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:39:00+0200",
+            "arrivalTimestamp": 1790411940,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000328",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "42",
+            "operator": "MGB-bvz",
+            "to": "Fiesch",
+            "passList": [
+              {
+                "station": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:39:00+0200",
+                "arrivalTimestamp": 1790411940,
+                "departure": "2026-09-26T10:48:00+0200",
+                "departureTimestamp": 1790412480,
+                "delay": null,
+                "platform": "14",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:51:00+0200",
+                "arrivalTimestamp": 1790412660,
+                "departure": "2026-09-26T10:51:00+0200",
+                "departureTimestamp": 1790412660,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:56:00+0200",
+                "arrivalTimestamp": 1790412960,
+                "departure": "2026-09-26T10:57:00+0200",
+                "departureTimestamp": 1790413020,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:03:00+0200",
+                "arrivalTimestamp": 1790413380,
+                "departure": "2026-09-26T11:03:00+0200",
+                "departureTimestamp": 1790413380,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:06:00+0200",
+                "arrivalTimestamp": 1790413560,
+                "departure": "2026-09-26T11:10:00+0200",
+                "departureTimestamp": 1790413800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:17:00+0200",
+                "arrivalTimestamp": 1790414220,
+                "departure": "2026-09-26T11:17:00+0200",
+                "departureTimestamp": 1790414220,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:20:00+0200",
+                "arrivalTimestamp": 1790414400,
+                "departure": "2026-09-26T11:20:00+0200",
+                "departureTimestamp": 1790414400,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:22:00+0200",
+                "arrivalTimestamp": 1790414520,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:39:00+0200",
+            "arrivalTimestamp": 1790411940,
+            "departure": "2026-09-26T10:48:00+0200",
+            "departureTimestamp": 1790412480,
+            "delay": null,
+            "platform": "14",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:22:00+0200",
+            "arrivalTimestamp": 1790414520,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T08:49:00+0200",
+        "departureTimestamp": 1790405340,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T11:55:00+0200",
+        "arrivalTimestamp": 1790416500,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "2",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:06:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030811",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T08:49:00+0200",
+                "departureTimestamp": 1790405340,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:04:00+0200",
+                "arrivalTimestamp": 1790406240,
+                "departure": "2026-09-26T09:09:00+0200",
+                "departureTimestamp": 1790406540,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:28:00+0200",
+                "arrivalTimestamp": 1790407680,
+                "departure": "2026-09-26T09:30:00+0200",
+                "departureTimestamp": 1790407800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:36:00+0200",
+                "arrivalTimestamp": 1790408160,
+                "departure": "2026-09-26T09:37:00+0200",
+                "departureTimestamp": 1790408220,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:47:00+0200",
+                "arrivalTimestamp": 1790408820,
+                "departure": "2026-09-26T09:48:00+0200",
+                "departureTimestamp": 1790408880,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:04:00+0200",
+                "arrivalTimestamp": 1790409840,
+                "departure": "2026-09-26T10:05:00+0200",
+                "departureTimestamp": 1790409900,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:19:00+0200",
+                "arrivalTimestamp": 1790410740,
+                "departure": "2026-09-26T10:20:00+0200",
+                "departureTimestamp": 1790410800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:30:00+0200",
+                "arrivalTimestamp": 1790411400,
+                "departure": "2026-09-26T10:31:00+0200",
+                "departureTimestamp": 1790411460,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501601",
+                  "name": "Leuk",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.311574,
+                    "y": 7.644928
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:38:00+0200",
+                "arrivalTimestamp": 1790411880,
+                "departure": "2026-09-26T10:39:00+0200",
+                "departureTimestamp": 1790411940,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501601",
+                  "name": "Leuk",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.311574,
+                    "y": 7.644928
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:50:00+0200",
+                "arrivalTimestamp": 1790412600,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "5",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T08:49:00+0200",
+            "departureTimestamp": 1790405340,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501605",
+              "name": "Visp",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.29402,
+                "y": 7.881455
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:50:00+0200",
+            "arrivalTimestamp": 1790412600,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "5",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501605",
+              "name": "Visp",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.29402,
+                "y": 7.881455
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000530",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "43",
+            "operator": "MGB-fo",
+            "to": "Andermatt",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:50:00+0200",
+                "arrivalTimestamp": 1790412600,
+                "departure": "2026-09-26T11:08:00+0200",
+                "departureTimestamp": 1790413680,
+                "delay": null,
+                "platform": "2",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501636",
+                  "name": "Eyholz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.296775,
+                    "y": 7.916298
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:11:00+0200",
+                "arrivalTimestamp": 1790413860,
+                "departure": "2026-09-26T11:11:00+0200",
+                "departureTimestamp": 1790413860,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501636",
+                  "name": "Eyholz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.296775,
+                    "y": 7.916298
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:20:00+0200",
+                "arrivalTimestamp": 1790414400,
+                "departure": "2026-09-26T11:23:00+0200",
+                "departureTimestamp": 1790414580,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:28:00+0200",
+                "arrivalTimestamp": 1790414880,
+                "departure": "2026-09-26T11:28:00+0200",
+                "departureTimestamp": 1790414880,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:33:00+0200",
+                "arrivalTimestamp": 1790415180,
+                "departure": "2026-09-26T11:33:00+0200",
+                "departureTimestamp": 1790415180,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:38:00+0200",
+                "arrivalTimestamp": 1790415480,
+                "departure": "2026-09-26T11:39:00+0200",
+                "departureTimestamp": 1790415540,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:42:00+0200",
+                "arrivalTimestamp": 1790415720,
+                "departure": "2026-09-26T11:43:00+0200",
+                "departureTimestamp": 1790415780,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:50:00+0200",
+                "arrivalTimestamp": 1790416200,
+                "departure": "2026-09-26T11:50:00+0200",
+                "departureTimestamp": 1790416200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:53:00+0200",
+                "arrivalTimestamp": 1790416380,
+                "departure": "2026-09-26T11:53:00+0200",
+                "departureTimestamp": 1790416380,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:55:00+0200",
+                "arrivalTimestamp": 1790416500,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "2",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501605",
+              "name": "Visp",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.29402,
+                "y": 7.881455
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:50:00+0200",
+            "arrivalTimestamp": 1790412600,
+            "departure": "2026-09-26T11:08:00+0200",
+            "departureTimestamp": 1790413680,
+            "delay": null,
+            "platform": "2",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501605",
+              "name": "Visp",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.29402,
+                "y": 7.881455
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:55:00+0200",
+            "arrivalTimestamp": 1790416500,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "2",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T09:20:00+0200",
+        "departureTimestamp": 1790407200,
+        "delay": null,
+        "platform": "4",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T12:22:00+0200",
+        "arrivalTimestamp": 1790418120,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": "1",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501672",
+          "name": "Fiesch",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.406279,
+            "y": 8.134178
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:02:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 95",
+        "R"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030713",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "95",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T09:20:00+0200",
+                "departureTimestamp": 1790407200,
+                "delay": null,
+                "platform": "4",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:37:00+0200",
+                "arrivalTimestamp": 1790408220,
+                "departure": "2026-09-26T09:43:00+0200",
+                "departureTimestamp": 1790408580,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:00:00+0200",
+                "arrivalTimestamp": 1790409600,
+                "departure": "2026-09-26T10:03:00+0200",
+                "departureTimestamp": 1790409780,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:09:00+0200",
+                "arrivalTimestamp": 1790410140,
+                "departure": "2026-09-26T10:10:00+0200",
+                "departureTimestamp": 1790410200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:20:00+0200",
+                "arrivalTimestamp": 1790410800,
+                "departure": "2026-09-26T10:21:00+0200",
+                "departureTimestamp": 1790410860,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501400",
+                  "name": "Aigle",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.316856,
+                    "y": 6.96367
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501403",
+                  "name": "St-Maurice",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.216366,
+                    "y": 7.002023
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:30:00+0200",
+                "arrivalTimestamp": 1790411400,
+                "departure": "2026-09-26T10:31:00+0200",
+                "departureTimestamp": 1790411460,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501403",
+                  "name": "St-Maurice",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.216366,
+                    "y": 7.002023
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:41:00+0200",
+                "arrivalTimestamp": 1790412060,
+                "departure": "2026-09-26T10:42:00+0200",
+                "departureTimestamp": 1790412120,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501500",
+                  "name": "Martigny",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.105829,
+                    "y": 7.079108
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:56:00+0200",
+                "arrivalTimestamp": 1790412960,
+                "departure": "2026-09-26T10:57:00+0200",
+                "departureTimestamp": 1790413020,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501506",
+                  "name": "Sion",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.227544,
+                    "y": 7.359183
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:07:00+0200",
+                "arrivalTimestamp": 1790413620,
+                "departure": "2026-09-26T11:08:00+0200",
+                "departureTimestamp": 1790413680,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501509",
+                  "name": "Sierre/Siders",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.292112,
+                    "y": 7.532811
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:23:00+0200",
+                "arrivalTimestamp": 1790414580,
+                "departure": "2026-09-26T11:24:00+0200",
+                "departureTimestamp": 1790414640,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501605",
+                  "name": "Visp",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.29402,
+                    "y": 7.881455
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501609",
+                  "name": "Brig",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319416,
+                    "y": 7.988089
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:32:00+0200",
+                "arrivalTimestamp": 1790415120,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "4",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501609",
+                  "name": "Brig",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319416,
+                    "y": 7.988089
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T09:20:00+0200",
+            "departureTimestamp": 1790407200,
+            "delay": null,
+            "platform": "4",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:32:00+0200",
+            "arrivalTimestamp": 1790415120,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "4",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 420
+          },
+          "departure": {
+            "station": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:32:00+0200",
+            "arrivalTimestamp": 1790415120,
+            "departure": "2026-09-26T11:32:00+0200",
+            "departureTimestamp": 1790415120,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501609",
+              "name": "Brig",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319416,
+                "y": 7.988089
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:39:00+0200",
+            "arrivalTimestamp": 1790415540,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "000332",
+            "category": "R",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "42",
+            "operator": "MGB-bvz",
+            "to": "Fiesch",
+            "passList": [
+              {
+                "station": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:39:00+0200",
+                "arrivalTimestamp": 1790415540,
+                "departure": "2026-09-26T11:48:00+0200",
+                "departureTimestamp": 1790416080,
+                "delay": null,
+                "platform": "14",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8515296",
+                  "name": "Brig Bahnhofplatz",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.319001,
+                    "y": 7.986371
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:51:00+0200",
+                "arrivalTimestamp": 1790416260,
+                "departure": "2026-09-26T11:51:00+0200",
+                "departureTimestamp": 1790416260,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501677",
+                  "name": "Bitsch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.336048,
+                    "y": 8.01722
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:56:00+0200",
+                "arrivalTimestamp": 1790416560,
+                "departure": "2026-09-26T11:57:00+0200",
+                "departureTimestamp": 1790416620,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501676",
+                  "name": "Mörel",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.356195,
+                    "y": 8.047135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:03:00+0200",
+                "arrivalTimestamp": 1790416980,
+                "departure": "2026-09-26T12:03:00+0200",
+                "departureTimestamp": 1790416980,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501675",
+                  "name": "Bettmeralp Talstation",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.371147,
+                    "y": 8.076505
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:06:00+0200",
+                "arrivalTimestamp": 1790417160,
+                "departure": "2026-09-26T12:10:00+0200",
+                "departureTimestamp": 1790417400,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501674",
+                  "name": "Grengiols",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.375199,
+                    "y": 8.091669
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:17:00+0200",
+                "arrivalTimestamp": 1790417820,
+                "departure": "2026-09-26T12:17:00+0200",
+                "departureTimestamp": 1790417820,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501673",
+                  "name": "Lax",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.386996,
+                    "y": 8.117135
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:20:00+0200",
+                "arrivalTimestamp": 1790418000,
+                "departure": "2026-09-26T12:20:00+0200",
+                "departureTimestamp": 1790418000,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501729",
+                  "name": "Fiesch Feriendorf",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.397313,
+                    "y": 8.13076
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:22:00+0200",
+                "arrivalTimestamp": 1790418120,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "1",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501672",
+                  "name": "Fiesch",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.406279,
+                    "y": 8.134178
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:39:00+0200",
+            "arrivalTimestamp": 1790415540,
+            "departure": "2026-09-26T11:48:00+0200",
+            "departureTimestamp": 1790416080,
+            "delay": null,
+            "platform": "14",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8515296",
+              "name": "Brig Bahnhofplatz",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.319001,
+                "y": 7.986371
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T12:22:00+0200",
+            "arrivalTimestamp": 1790418120,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "1",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501672",
+              "name": "Fiesch",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.406279,
+                "y": 8.134178
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "from": {
+    "id": "8501120",
+    "name": "Lausanne",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.516795,
+      "y": 6.629087
+    },
+    "distance": null
+  },
+  "to": {
+    "id": "8501672",
+    "name": "Fiesch",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.406279,
+      "y": 8.134178
+    },
+    "distance": null
+  },
+  "stations": {
+    "from": [
+      {
+        "id": "8501120",
+        "name": "Lausanne",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.516795,
+          "y": 6.629087
+        },
+        "distance": null
+      }
+    ],
+    "to": [
+      {
+        "id": "8501672",
+        "name": "Fiesch",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.406279,
+          "y": 8.134178
+        },
+        "distance": null
+      }
+    ]
+  }
+}

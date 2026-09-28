@@ -1,0 +1,2487 @@
+{
+  "connections": [
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T08:49:00+0200",
+        "departureTimestamp": 1790405340,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T12:30:00+0200",
+        "arrivalTimestamp": 1790418600,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": null,
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:41:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "PE"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030811",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T08:49:00+0200",
+                "departureTimestamp": 1790405340,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:04:00+0200",
+                "arrivalTimestamp": 1790406240,
+                "departure": "2026-09-26T09:09:00+0200",
+                "departureTimestamp": 1790406540,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:28:00+0200",
+                "arrivalTimestamp": 1790407680,
+                "departure": "2026-09-26T09:30:00+0200",
+                "departureTimestamp": 1790407800,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:36:00+0200",
+                "arrivalTimestamp": 1790408160,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T08:49:00+0200",
+            "departureTimestamp": 1790405340,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:36:00+0200",
+            "arrivalTimestamp": 1790408160,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "002214",
+            "category": "PE",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "30",
+            "operator": "MOB",
+            "to": "Zweisimmen",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:36:00+0200",
+                "arrivalTimestamp": 1790408160,
+                "departure": "2026-09-26T09:43:00+0200",
+                "departureTimestamp": 1790408580,
+                "delay": null,
+                "platform": "6",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:49:00+0200",
+                "arrivalTimestamp": 1790408940,
+                "departure": "2026-09-26T09:50:00+0200",
+                "departureTimestamp": 1790409000,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:52:00+0200",
+                "arrivalTimestamp": 1790409120,
+                "departure": "2026-09-26T09:52:00+0200",
+                "departureTimestamp": 1790409120,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:54:00+0200",
+                "arrivalTimestamp": 1790409240,
+                "departure": "2026-09-26T09:54:00+0200",
+                "departureTimestamp": 1790409240,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T09:58:00+0200",
+                "arrivalTimestamp": 1790409480,
+                "departure": "2026-09-26T10:00:00+0200",
+                "departureTimestamp": 1790409600,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:03:00+0200",
+                "arrivalTimestamp": 1790409780,
+                "departure": "2026-09-26T10:03:00+0200",
+                "departureTimestamp": 1790409780,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:08:00+0200",
+                "arrivalTimestamp": 1790410080,
+                "departure": "2026-09-26T10:08:00+0200",
+                "departureTimestamp": 1790410080,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:11:00+0200",
+                "arrivalTimestamp": 1790410260,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T09:36:00+0200",
+            "arrivalTimestamp": 1790408160,
+            "departure": "2026-09-26T09:43:00+0200",
+            "departureTimestamp": 1790408580,
+            "delay": null,
+            "platform": "6",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:11:00+0200",
+            "arrivalTimestamp": 1790410260,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 0
+          },
+          "departure": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:11:00+0200",
+            "arrivalTimestamp": 1790410260,
+            "departure": "2026-09-26T10:11:00+0200",
+            "departureTimestamp": 1790410260,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T12:30:00+0200",
+            "arrivalTimestamp": 1790418600,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T09:49:00+0200",
+        "departureTimestamp": 1790408940,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T13:30:00+0200",
+        "arrivalTimestamp": 1790422200,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": null,
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:41:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "PE"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030813",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T09:49:00+0200",
+                "departureTimestamp": 1790408940,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:04:00+0200",
+                "arrivalTimestamp": 1790409840,
+                "departure": "2026-09-26T10:09:00+0200",
+                "departureTimestamp": 1790410140,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:28:00+0200",
+                "arrivalTimestamp": 1790411280,
+                "departure": "2026-09-26T10:30:00+0200",
+                "departureTimestamp": 1790411400,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:36:00+0200",
+                "arrivalTimestamp": 1790411760,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T09:49:00+0200",
+            "departureTimestamp": 1790408940,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:36:00+0200",
+            "arrivalTimestamp": 1790411760,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "002216",
+            "category": "PE",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "30",
+            "operator": "MOB",
+            "to": "Zweisimmen",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:36:00+0200",
+                "arrivalTimestamp": 1790411760,
+                "departure": "2026-09-26T10:43:00+0200",
+                "departureTimestamp": 1790412180,
+                "delay": null,
+                "platform": "5",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:49:00+0200",
+                "arrivalTimestamp": 1790412540,
+                "departure": "2026-09-26T10:50:00+0200",
+                "departureTimestamp": 1790412600,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:52:00+0200",
+                "arrivalTimestamp": 1790412720,
+                "departure": "2026-09-26T10:52:00+0200",
+                "departureTimestamp": 1790412720,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:54:00+0200",
+                "arrivalTimestamp": 1790412840,
+                "departure": "2026-09-26T10:54:00+0200",
+                "departureTimestamp": 1790412840,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T10:58:00+0200",
+                "arrivalTimestamp": 1790413080,
+                "departure": "2026-09-26T11:00:00+0200",
+                "departureTimestamp": 1790413200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:03:00+0200",
+                "arrivalTimestamp": 1790413380,
+                "departure": "2026-09-26T11:03:00+0200",
+                "departureTimestamp": 1790413380,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:08:00+0200",
+                "arrivalTimestamp": 1790413680,
+                "departure": "2026-09-26T11:08:00+0200",
+                "departureTimestamp": 1790413680,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:11:00+0200",
+                "arrivalTimestamp": 1790413860,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T10:36:00+0200",
+            "arrivalTimestamp": 1790411760,
+            "departure": "2026-09-26T10:43:00+0200",
+            "departureTimestamp": 1790412180,
+            "delay": null,
+            "platform": "5",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:11:00+0200",
+            "arrivalTimestamp": 1790413860,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 0
+          },
+          "departure": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:11:00+0200",
+            "arrivalTimestamp": 1790413860,
+            "departure": "2026-09-26T11:11:00+0200",
+            "departureTimestamp": 1790413860,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T13:30:00+0200",
+            "arrivalTimestamp": 1790422200,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    },
+    {
+      "from": {
+        "station": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        },
+        "arrival": null,
+        "arrivalTimestamp": null,
+        "departure": "2026-09-26T10:49:00+0200",
+        "departureTimestamp": 1790412540,
+        "delay": null,
+        "platform": "3",
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501120",
+          "name": "Lausanne",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.516795,
+            "y": 6.629087
+          },
+          "distance": null
+        }
+      },
+      "to": {
+        "station": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        },
+        "arrival": "2026-09-26T14:32:00+0200",
+        "arrivalTimestamp": 1790425920,
+        "departure": null,
+        "departureTimestamp": null,
+        "delay": null,
+        "platform": null,
+        "prognosis": {
+          "platform": null,
+          "arrival": null,
+          "departure": null,
+          "capacity1st": null,
+          "capacity2nd": null
+        },
+        "realtimeAvailability": null,
+        "location": {
+          "id": "8501367",
+          "name": "Jaman",
+          "score": null,
+          "coordinate": {
+            "type": "WGS84",
+            "x": 46.44134,
+            "y": 6.976777
+          },
+          "distance": null
+        }
+      },
+      "duration": "00d03:43:00",
+      "transfers": 1,
+      "service": null,
+      "products": [
+        "IR 90",
+        "PE"
+      ],
+      "capacity1st": null,
+      "capacity2nd": null,
+      "sections": [
+        {
+          "journey": {
+            "name": "030815",
+            "category": "IR",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "90",
+            "operator": "SBB",
+            "to": "Brig",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                },
+                "arrival": null,
+                "arrivalTimestamp": null,
+                "departure": "2026-09-26T10:49:00+0200",
+                "departureTimestamp": 1790412540,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501120",
+                  "name": "Lausanne",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.516795,
+                    "y": 6.629087
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:04:00+0200",
+                "arrivalTimestamp": 1790413440,
+                "departure": "2026-09-26T11:09:00+0200",
+                "departureTimestamp": 1790413740,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8504014",
+                  "name": "Palézieux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.542766,
+                    "y": 6.83786
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:26:00+0200",
+                "arrivalTimestamp": 1790414760,
+                "departure": "2026-09-26T11:29:00+0200",
+                "departureTimestamp": 1790414940,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501200",
+                  "name": "Vevey",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.463002,
+                    "y": 6.84343
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:34:00+0200",
+                "arrivalTimestamp": 1790415240,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": "3",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            },
+            "arrival": null,
+            "arrivalTimestamp": null,
+            "departure": "2026-09-26T10:49:00+0200",
+            "departureTimestamp": 1790412540,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501120",
+              "name": "Lausanne",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.516795,
+                "y": 6.629087
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:34:00+0200",
+            "arrivalTimestamp": 1790415240,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": "3",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": {
+            "name": "002218",
+            "category": "PE",
+            "subcategory": null,
+            "categoryCode": null,
+            "number": "30",
+            "operator": "MOB",
+            "to": "Zweisimmen",
+            "passList": [
+              {
+                "station": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:34:00+0200",
+                "arrivalTimestamp": 1790415240,
+                "departure": "2026-09-26T11:43:00+0200",
+                "departureTimestamp": 1790415780,
+                "delay": null,
+                "platform": "5",
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501300",
+                  "name": "Montreux",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.435887,
+                    "y": 6.910425
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:49:00+0200",
+                "arrivalTimestamp": 1790416140,
+                "departure": "2026-09-26T11:50:00+0200",
+                "departureTimestamp": 1790416200,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501374",
+                  "name": "Fontanivent",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.452725,
+                    "y": 6.902322
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:52:00+0200",
+                "arrivalTimestamp": 1790416320,
+                "departure": "2026-09-26T11:52:00+0200",
+                "departureTimestamp": 1790416320,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501375",
+                  "name": "Chernex",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.445916,
+                    "y": 6.910067
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:54:00+0200",
+                "arrivalTimestamp": 1790416440,
+                "departure": "2026-09-26T11:54:00+0200",
+                "departureTimestamp": 1790416440,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501384",
+                  "name": "Sonzier",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.439311,
+                    "y": 6.921466
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T11:58:00+0200",
+                "arrivalTimestamp": 1790416680,
+                "departure": "2026-09-26T12:02:00+0200",
+                "departureTimestamp": 1790416920,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501376",
+                  "name": "Chamby",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.449323,
+                    "y": 6.913496
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:05:00+0200",
+                "arrivalTimestamp": 1790417100,
+                "departure": "2026-09-26T12:05:00+0200",
+                "departureTimestamp": 1790417100,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501385",
+                  "name": "Sendy-Sollard",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.447105,
+                    "y": 6.930124
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:09:00+0200",
+                "arrivalTimestamp": 1790417340,
+                "departure": "2026-09-26T12:10:00+0200",
+                "departureTimestamp": 1790417400,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501377",
+                  "name": "Les Avants",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.453623,
+                    "y": 6.943469
+                  },
+                  "distance": null
+                }
+              },
+              {
+                "station": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                },
+                "arrival": "2026-09-26T12:13:00+0200",
+                "arrivalTimestamp": 1790417580,
+                "departure": null,
+                "departureTimestamp": null,
+                "delay": null,
+                "platform": null,
+                "prognosis": {
+                  "platform": null,
+                  "arrival": null,
+                  "departure": null,
+                  "capacity1st": null,
+                  "capacity2nd": null
+                },
+                "realtimeAvailability": null,
+                "location": {
+                  "id": "8501386",
+                  "name": "Jor",
+                  "score": null,
+                  "coordinate": {
+                    "type": "WGS84",
+                    "x": 46.454668,
+                    "y": 6.965105
+                  },
+                  "distance": null
+                }
+              }
+            ],
+            "capacity1st": null,
+            "capacity2nd": null
+          },
+          "walk": null,
+          "departure": {
+            "station": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T11:34:00+0200",
+            "arrivalTimestamp": 1790415240,
+            "departure": "2026-09-26T11:43:00+0200",
+            "departureTimestamp": 1790415780,
+            "delay": null,
+            "platform": "5",
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501300",
+              "name": "Montreux",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.435887,
+                "y": 6.910425
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T12:13:00+0200",
+            "arrivalTimestamp": 1790417580,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          }
+        },
+        {
+          "journey": null,
+          "walk": {
+            "duration": 0
+          },
+          "departure": {
+            "station": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T12:13:00+0200",
+            "arrivalTimestamp": 1790417580,
+            "departure": "2026-09-26T12:13:00+0200",
+            "departureTimestamp": 1790417580,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501386",
+              "name": "Jor",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.454668,
+                "y": 6.965105
+              },
+              "distance": null
+            }
+          },
+          "arrival": {
+            "station": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            },
+            "arrival": "2026-09-26T14:32:00+0200",
+            "arrivalTimestamp": 1790425920,
+            "departure": null,
+            "departureTimestamp": null,
+            "delay": null,
+            "platform": null,
+            "prognosis": {
+              "platform": null,
+              "arrival": null,
+              "departure": null,
+              "capacity1st": null,
+              "capacity2nd": null
+            },
+            "realtimeAvailability": null,
+            "location": {
+              "id": "8501367",
+              "name": "Jaman",
+              "score": null,
+              "coordinate": {
+                "type": "WGS84",
+                "x": 46.44134,
+                "y": 6.976777
+              },
+              "distance": null
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "from": {
+    "id": "8501120",
+    "name": "Lausanne",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.516795,
+      "y": 6.629087
+    },
+    "distance": null
+  },
+  "to": {
+    "id": "8501367",
+    "name": "Jaman",
+    "score": null,
+    "coordinate": {
+      "type": "WGS84",
+      "x": 46.44134,
+      "y": 6.976777
+    },
+    "distance": null
+  },
+  "stations": {
+    "from": [
+      {
+        "id": "8501120",
+        "name": "Lausanne",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.516795,
+          "y": 6.629087
+        },
+        "distance": null
+      }
+    ],
+    "to": [
+      {
+        "id": "8501367",
+        "name": "Jaman",
+        "score": null,
+        "coordinate": {
+          "type": "WGS84",
+          "x": 46.44134,
+          "y": 6.976777
+        },
+        "distance": null
+      }
+    ]
+  }
+}

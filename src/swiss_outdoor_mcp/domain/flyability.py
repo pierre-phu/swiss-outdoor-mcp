@@ -56,6 +56,9 @@ DISCLAIMER = (
 # Required by the CC BY 4.0 licence of the data (docs/api-notes.md section 2.4).
 ATTRIBUTION = "Weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0."
 
+# Spelled out rather than strftime("%A"), which follows the process locale.
+WEEKDAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+
 _SECTORS: tuple[CompassSector, ...] = (
     "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE",
     "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW",
@@ -213,6 +216,7 @@ def compute_flyability(
     return Flyability(
         site_id=site.id,
         date=day,
+        weekday=WEEKDAYS[day.weekday()],
         p_flyable=_share(flyable_members, n),
         hourly=hourly,
         model=forecast.model,

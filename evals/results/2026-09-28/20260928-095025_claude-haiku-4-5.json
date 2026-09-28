@@ -1,0 +1,315 @@
+{
+  "model": "claude-haiku-4-5",
+  "started_at": "2026-09-28T09:50:25+02:00",
+  "git_revision": "5f88c08",
+  "eval_today": "2026-09-25",
+  "max_turns": 10,
+  "summary": {
+    "passed": 5,
+    "total": 5,
+    "input_tokens": 67718,
+    "output_tokens": 3913,
+    "estimated_cost_usd": 0.087283
+  },
+  "tasks": [
+    {
+      "task_id": "valais-sites",
+      "prompt": "Which paragliding sites are in Valais?",
+      "passed": true,
+      "verdicts": [
+        {
+          "assertion": "called",
+          "passed": true,
+          "reason": "list_sites called with {'region': 'Valais'}"
+        }
+      ],
+      "trace": [
+        {
+          "name": "list_sites",
+          "arguments": {
+            "region": "Valais"
+          },
+          "is_error": false,
+          "result": "{\n  \"id\": \"ruinettes\",\n  \"name\": \"Verbier - Ruinettes _ Fontanets_Attelas\",\n  \"region\": \"Valais\",\n  \"lat\": 46.0904,\n  \"lon\": 7.25185,\n  \"altitude_m\": 2169,\n  \"orientations\": [\n    \"S\",\n    \"SW\",\n    \"W\"\n  ],\n  \"nearest_stop\": \"Verbier, Médran\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"fiesch\",\n  \"name\": \"Fiesch -Kuehboden (Heimat- Galfera)\",\n  \"region\": \"Valais\",\n  \"lat\": 46.4048,\n  \"lon\": 8.09598,\n  \"altitude_m\": 2163,\n  \"orientations\": [\n    \"SE\",\n    \"S\",\n    \"SW\"\n  ],\n  \"nearest_stop\": \"Fiesch\""
+        }
+      ],
+      "final_text": "There are 2 paragliding sites in Valais:\n\n1. **Verbier - Ruinettes / Fontanets / Attelas** (`ruinettes`)\n   - Altitude: 2,169 m\n   - Orientations: S, SW, W (south-facing)\n   - Nearest stop: Verbier, Médran\n   - Coordinates: 46.0904°N, 7.25185°E\n\n2. **Fiesch - Kuehboden (Heimat-Galfera)** (`fiesch`)\n   - Altitude: 2,163 m\n   - Orientations: SE, S, SW (south-facing)\n   - Nearest stop: Fiesch\n   - Coordinates: 46.4048°N, 8.09598°E\n\nBoth are high-altitude south-facing sites. If you're interested in checking the weather and flyability for either of these sites on a specific date, or finding public transport connections to them, let me know the date and I can help you plan your outing!",
+      "turns": 2,
+      "stop_reason": "end_turn",
+      "input_tokens": 4205,
+      "output_tokens": 309,
+      "error": null,
+      "notes": []
+    },
+    {
+      "task_id": "flyable-saturday",
+      "prompt": "Is it flyable on Saturday at Fiesch?",
+      "passed": true,
+      "verdicts": [
+        {
+          "assertion": "called",
+          "passed": true,
+          "reason": "get_flyability called with {'site_id': 'fiesch', 'date': '2026-09-26'}"
+        }
+      ],
+      "trace": [
+        {
+          "name": "list_sites",
+          "arguments": {
+            "region": "Valais"
+          },
+          "is_error": false,
+          "result": "{\n  \"id\": \"ruinettes\",\n  \"name\": \"Verbier - Ruinettes _ Fontanets_Attelas\",\n  \"region\": \"Valais\",\n  \"lat\": 46.0904,\n  \"lon\": 7.25185,\n  \"altitude_m\": 2169,\n  \"orientations\": [\n    \"S\",\n    \"SW\",\n    \"W\"\n  ],\n  \"nearest_stop\": \"Verbier, Médran\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"fiesch\",\n  \"name\": \"Fiesch -Kuehboden (Heimat- Galfera)\",\n  \"region\": \"Valais\",\n  \"lat\": 46.4048,\n  \"lon\": 8.09598,\n  \"altitude_m\": 2163,\n  \"orientations\": [\n    \"SE\",\n    \"S\",\n    \"SW\"\n  ],\n  \"nearest_stop\": \"Fiesch\""
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "fiesch",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"fiesch\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 1.9,\n        \"p10\": 1.6,\n        \"p90\": 2.2\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p"
+        }
+      ],
+      "final_text": "Excellent news! **Yes, Fiesch is very flyable on Saturday, September 26th.**\n\nHere's the forecast breakdown:\n\n- **Overall flyability: 100%** - All ensemble members predict at least 3 consecutive flyable hours\n- **Best flying window: 10:00–17:00** with consistently excellent conditions\n  - All criteria (wind speed, gusts, precipitation, wind direction) are favorable across all hours\n  - Wind builds gradually from light (~2 km/h at 10:00) to moderate (~12 km/h at 16:00)\n  - The site's SE/S/SW orientation is well-matched to the forecast wind direction\n  - No rain expected (100% dry)\n\n**⚠️ Important disclaimer:** This is an indicator only, computed from a weather-model ensemble. It does not replace pilot judgment, an on-site assessment of conditions, or official aviation weather forecasts. Always check current conditions on the day.\n\nWould you like help with public transport connections to Fiesch for Saturday?",
+      "turns": 3,
+      "stop_reason": "end_turn",
+      "input_tokens": 8197,
+      "output_tokens": 435,
+      "error": null,
+      "notes": []
+    },
+    {
+      "task_id": "train-to-site",
+      "prompt": "How do I get from Lausanne to the Berneuse launch on Saturday morning?",
+      "passed": true,
+      "verdicts": [
+        {
+          "assertion": "called",
+          "passed": true,
+          "reason": "get_connections called with {'origin': 'Lausanne', 'destination': 'Leysin-Feydey', 'date': '2026-09-26'}"
+        }
+      ],
+      "trace": [
+        {
+          "name": "list_sites",
+          "arguments": {
+            "region": "Bernese Oberland"
+          },
+          "is_error": false,
+          "result": ""
+        },
+        {
+          "name": "list_sites",
+          "arguments": {},
+          "is_error": false,
+          "result": "{\n  \"id\": \"pleiades\",\n  \"name\": \"Pleiades\",\n  \"region\": \"Vaud\",\n  \"lat\": 46.4833,\n  \"lon\": 6.90718,\n  \"altitude_m\": 1312,\n  \"orientations\": [\n    \"W\"\n  ],\n  \"nearest_stop\": \"Les Pléiades\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"lally\",\n  \"name\": \"Lally\",\n  \"region\": \"Vaud\",\n  \"lat\": 46.4782,\n  \"lon\": 6.90986,\n  \"altitude_m\": 1236,\n  \"orientations\": [\n    \"SE\",\n    \"S\",\n    \"SW\"\n  ],\n  \"nearest_stop\": \"Lally\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"jaman\",\n  \"name\": \"Dent de Jaman (Rochers de Naye)"
+        },
+        {
+          "name": "get_connections",
+          "arguments": {
+            "origin": "Lausanne",
+            "destination": "Leysin-Feydey",
+            "date": "2026-09-26",
+            "depart_after": "08:00",
+            "limit": 3
+          },
+          "is_error": false,
+          "result": "{\n  \"departure\": \"2026-09-26T08:05:00+02:00\",\n  \"arrival\": \"2026-09-26T09:39:00+02:00\",\n  \"duration_min\": 94,\n  \"transfers\": 2,\n  \"sections\": [\n    {\n      \"mode\": \"bus\",\n      \"category\": \"EV\",\n      \"line\": \"EV1\",\n      \"from_stop\": \"Lausanne, gare\",\n      \"to_stop\": \"Pully, gare\",\n      \"departure\": \"2026-09-26T08:05:00+02:00\",\n      \"arrival\": \"2026-09-26T08:15:00+02:00\"\n    },\n    {\n      \"mode\": \"walk\",\n      \"category\": null,\n      \"line\": null,\n      \"from_stop\": \"Pully, gare\",\n      \"to"
+        }
+      ],
+      "final_text": "Great! Here are your options for getting from Lausanne to the **Berneuse launch** (via Leysin-Feydey) on **Saturday, 26 September**:\n\n## Option 1 (Earliest) - 08:05 to 09:39 (94 minutes, 2 transfers)\n- **08:05** Lausanne, gare → **08:15** Pully (bus EV1)\n- Walk at Pully (3 min)\n- **08:21** Pully → **09:02** Aigle (RE 33)\n- **09:12** Aigle → **09:39** Leysin-Feydey (train R 70)\n\n## Option 2 - 08:49 to 10:19 (90 minutes, 1 transfer)\n- **08:49** Lausanne → **09:47** Aigle (train IR 90)\n- **09:52** Aigle → **10:19** Leysin-Feydey (train R 70)\n\n## Option 3 - 09:49 to 11:19 (90 minutes, 1 transfer)\n- **09:49** Lausanne → **10:47** Aigle (train IR 90)\n- **10:52** Aigle → **11:19** Leysin-Feydey (train R 70)\n\n**Option 1** gets you there earliest at 09:39, which is good for a morning flight. **Option 2** is simpler with fewer transfers. From Leysin-Feydey station, you'll need to walk/hike up to the actual launch site (the access notes indicate the station is the last stop the timetable can route to).\n\nWould you like me to check the flyability forecast for Berneuse on Saturday to help you decide whether to go?",
+      "turns": 4,
+      "stop_reason": "end_turn",
+      "input_tokens": 11007,
+      "output_tokens": 790,
+      "error": null,
+      "notes": []
+    },
+    {
+      "task_id": "plan-saturday",
+      "prompt": "Saturday, from Lausanne, where can I go paragliding by train?",
+      "passed": true,
+      "verdicts": [
+        {
+          "assertion": "order",
+          "passed": true,
+          "reason": "first calls in order: list_sites -> get_flyability -> get_connections"
+        },
+        {
+          "assertion": "min_calls",
+          "passed": true,
+          "reason": "6 successful get_flyability call(s), need at least 2"
+        },
+        {
+          "assertion": "called",
+          "passed": true,
+          "reason": "get_flyability called with {'date': '2026-09-26'}"
+        },
+        {
+          "assertion": "to_nearest_stop",
+          "passed": true,
+          "reason": "get_connections.destination is a site's nearest_stop"
+        }
+      ],
+      "trace": [
+        {
+          "name": "ping",
+          "arguments": {},
+          "is_error": false,
+          "result": "swiss-outdoor-mcp 0.1.0a1 ok"
+        },
+        {
+          "name": "list_sites",
+          "arguments": {},
+          "is_error": false,
+          "result": "{\n  \"id\": \"pleiades\",\n  \"name\": \"Pleiades\",\n  \"region\": \"Vaud\",\n  \"lat\": 46.4833,\n  \"lon\": 6.90718,\n  \"altitude_m\": 1312,\n  \"orientations\": [\n    \"W\"\n  ],\n  \"nearest_stop\": \"Les Pléiades\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"lally\",\n  \"name\": \"Lally\",\n  \"region\": \"Vaud\",\n  \"lat\": 46.4782,\n  \"lon\": 6.90986,\n  \"altitude_m\": 1236,\n  \"orientations\": [\n    \"SE\",\n    \"S\",\n    \"SW\"\n  ],\n  \"nearest_stop\": \"Lally\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"jaman\",\n  \"name\": \"Dent de Jaman (Rochers de Naye)"
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "pleiades",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"pleiades\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 0.85,\n      \"p_flyable\": 0.85,\n      \"wind_kmh\": {\n        \"median\": 3.0,\n        \"p10\": 2.3,\n        \"p90\": 3.7\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n    "
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "lally",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"lally\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 0.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 3.0,\n        \"p10\": 2.3,\n        \"p90\": 3.7\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_"
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "jaman",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"jaman\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 4.0,\n        \"p10\": 2.2,\n        \"p90\": 5.4\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_"
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "berneuse",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"berneuse\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 1.5,\n        \"p10\": 1.0,\n        \"p90\": 2.2\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      "
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "ruinettes",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"ruinettes\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 1.9,\n        \"p10\": 1.8,\n        \"p90\": 2.3\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n     "
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "fiesch",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"fiesch\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 1.9,\n        \"p10\": 1.6,\n        \"p90\": 2.2\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p"
+        },
+        {
+          "name": "get_connections",
+          "arguments": {
+            "origin": "Lausanne",
+            "destination": "Jaman",
+            "date": "2026-09-26",
+            "depart_after": "07:00",
+            "limit": 3
+          },
+          "is_error": false,
+          "result": "{\n  \"departure\": \"2026-09-26T08:49:00+02:00\",\n  \"arrival\": \"2026-09-26T12:30:00+02:00\",\n  \"duration_min\": 221,\n  \"transfers\": 1,\n  \"sections\": [\n    {\n      \"mode\": \"train\",\n      \"category\": \"IR\",\n      \"line\": \"IR 90\",\n      \"from_stop\": \"Lausanne\",\n      \"to_stop\": \"Montreux\",\n      \"departure\": \"2026-09-26T08:49:00+02:00\",\n      \"arrival\": \"2026-09-26T09:36:00+02:00\"\n    },\n    {\n      \"mode\": \"other\",\n      \"category\": \"PE\",\n      \"line\": \"PE 30\",\n      \"from_stop\": \"Montreux\",\n      \"to_st"
+        },
+        {
+          "name": "get_connections",
+          "arguments": {
+            "origin": "Lausanne",
+            "destination": "Leysin-Feydey",
+            "date": "2026-09-26",
+            "depart_after": "07:00",
+            "limit": 3
+          },
+          "is_error": false,
+          "result": "{\n  \"departure\": \"2026-09-26T08:05:00+02:00\",\n  \"arrival\": \"2026-09-26T09:39:00+02:00\",\n  \"duration_min\": 94,\n  \"transfers\": 2,\n  \"sections\": [\n    {\n      \"mode\": \"bus\",\n      \"category\": \"EV\",\n      \"line\": \"EV1\",\n      \"from_stop\": \"Lausanne, gare\",\n      \"to_stop\": \"Pully, gare\",\n      \"departure\": \"2026-09-26T08:05:00+02:00\",\n      \"arrival\": \"2026-09-26T08:15:00+02:00\"\n    },\n    {\n      \"mode\": \"walk\",\n      \"category\": null,\n      \"line\": null,\n      \"from_stop\": \"Pully, gare\",\n      \"to"
+        },
+        {
+          "name": "get_connections",
+          "arguments": {
+            "origin": "Lausanne",
+            "destination": "Les Pléiades",
+            "date": "2026-09-26",
+            "depart_after": "07:00",
+            "limit": 3
+          },
+          "is_error": false,
+          "result": "{\n  \"departure\": \"2026-09-26T08:20:00+02:00\",\n  \"arrival\": \"2026-09-26T09:40:00+02:00\",\n  \"duration_min\": 80,\n  \"transfers\": 1,\n  \"sections\": [\n    {\n      \"mode\": \"train\",\n      \"category\": \"IR\",\n      \"line\": \"IR 95\",\n      \"from_stop\": \"Lausanne\",\n      \"to_stop\": \"Vevey\",\n      \"departure\": \"2026-09-26T08:20:00+02:00\",\n      \"arrival\": \"2026-09-26T09:00:00+02:00\"\n    },\n    {\n      \"mode\": \"train\",\n      \"category\": \"R\",\n      \"line\": \"R 35\",\n      \"from_stop\": \"Vevey\",\n      \"to_stop\": \"Les"
+        }
+      ],
+      "final_text": "Perfect! Here's what you can do from Lausanne on Saturday (2026-09-26):\n\n## **Best Options for Paragliding from Lausanne**\n\n### 🥇 **Berneuse (Leysin area)** — **EXCELLENT flyability**\n- **Flyability:** 100% probability of being flyable\n- **Wind:** Light to moderate (1–5 km/h mid-day, building to 4 km/h by afternoon)\n- **Best flying window:** 10:00–16:00\n- **Train options:**\n  - **8:49→10:19** (90 min): Lausanne → Aigle → Leysin-Feydey. Get you there by 10:19 — you can launch by 10:30!\n  - **9:49→11:19** (90 min): Later option if you sleep in\n- This is your **closest and fastest option** with excellent conditions.\n\n### 🥈 **Dent de Jaman (1,738m, SW/W/NW facing)** — **PERFECT flyability**\n- **Flyability:** 100% probability of being flyable  \n- **Wind:** Consistent 2–7 km/h throughout the day\n- **Best flying window:** 10:00–17:00 (optimal 12:00–16:00)\n- **Train options:**\n  - **8:49→12:30** (221 min): Lausanne → Montreux → Jor (by foot walk to Jaman)\n  - **9:49→13:30** (221 min): Later departure, arrives in time for peak conditions\n- Slightly longer journey, but amazing all-day conditions.\n\n### 🥉 **Les Pléiades (1,312m, W facing)** — **EXCELLENT flyability**\n- **Flyability:** 100% probability of being flyable\n- **Wind:** Light to moderate (3–9 km/h)\n- **Best flying window:** 11:00–14:00\n- **Train options:**\n  - **8:20→9:40** (80 min): Fastest option! Lausanne → Vevey → Les Pléiades\n  - **9:20→10:40** (80 min): Sleep in and still arrive by 10:40\n- **Closest site, shortest journey**, but wind shifts to poor direction after 16:00.\n\n---\n\n## **Recommendation**\n\nFor the **best combination of accessibility and conditions**, I'd suggest:\n1. **Berneuse** if you want light winds and all-day potential — take the 8:49 departure\n2. **Dent de Jaman** if you want consistency and can handle a longer journey  \n3. **Les Pléiades** if you want the quickest trip and don't mind an earlier finish\n\n**⚠️ Disclaimer:** These are indicators only, computed from a weather-model ensemble (icon_d2_eps, 20 members). They do not replace pilot judgment, an on-site assessment of conditions, or official aviation weather forecasts. Always check recent forecasts before heading out!\n\n*Weather data by Open-Meteo.com, CC BY 4.0.*",
+      "turns": 4,
+      "stop_reason": "end_turn",
+      "input_tokens": 33640,
+      "output_tokens": 1719,
+      "error": null,
+      "notes": []
+    },
+    {
+      "task_id": "unknown-site-recovery",
+      "prompt": "Check flyability for site id 'fiesch-kuehboden' on Saturday.",
+      "passed": true,
+      "verdicts": [
+        {
+          "assertion": "recovers",
+          "passed": true,
+          "reason": "get_flyability failed, list_sites was called, then get_flyability succeeded"
+        }
+      ],
+      "trace": [
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "fiesch-kuehboden",
+            "date": "2026-09-26"
+          },
+          "is_error": true,
+          "result": "Error executing tool get_flyability: Unknown site_id 'fiesch-kuehboden'. Call list_sites to get valid ids."
+        },
+        {
+          "name": "list_sites",
+          "arguments": {
+            "region": "Valais"
+          },
+          "is_error": false,
+          "result": "{\n  \"id\": \"ruinettes\",\n  \"name\": \"Verbier - Ruinettes _ Fontanets_Attelas\",\n  \"region\": \"Valais\",\n  \"lat\": 46.0904,\n  \"lon\": 7.25185,\n  \"altitude_m\": 2169,\n  \"orientations\": [\n    \"S\",\n    \"SW\",\n    \"W\"\n  ],\n  \"nearest_stop\": \"Verbier, Médran\",\n  \"access_notes\": \"TODO\"\n}\n{\n  \"id\": \"fiesch\",\n  \"name\": \"Fiesch -Kuehboden (Heimat- Galfera)\",\n  \"region\": \"Valais\",\n  \"lat\": 46.4048,\n  \"lon\": 8.09598,\n  \"altitude_m\": 2163,\n  \"orientations\": [\n    \"SE\",\n    \"S\",\n    \"SW\"\n  ],\n  \"nearest_stop\": \"Fiesch\""
+        },
+        {
+          "name": "get_flyability",
+          "arguments": {
+            "site_id": "fiesch",
+            "date": "2026-09-26"
+          },
+          "is_error": false,
+          "result": "{\n  \"site_id\": \"fiesch\",\n  \"date\": \"2026-09-26\",\n  \"weekday\": \"Saturday\",\n  \"p_flyable\": 1.0,\n  \"hourly\": [\n    {\n      \"time\": \"2026-09-26T10:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p_direction_ok\": 1.0,\n      \"p_flyable\": 1.0,\n      \"wind_kmh\": {\n        \"median\": 1.9,\n        \"p10\": 1.6,\n        \"p90\": 2.2\n      }\n    },\n    {\n      \"time\": \"2026-09-26T11:00:00+02:00\",\n      \"p_wind_ok\": 1.0,\n      \"p_gust_ok\": 1.0,\n      \"p_dry\": 1.0,\n      \"p"
+        }
+      ],
+      "final_text": "Excellent news! **Fiesch (Kühboden) looks very flyable on Saturday, 2026-09-26:**\n\n- **Overall flyability: 100%** (p_flyable = 1.0) - all 20 ensemble members predict at least 3 consecutive flyable hours between 10:00 and 17:00.\n\n**Hourly breakdown:**\n- **10:00–13:00**: Light winds (1.9–5.8 km/h median), all conditions optimal\n- **14:00–15:00**: Best thermal window with stronger winds (8.4–10.7 km/h median) — perfect for soaring\n- **16:00**: Peak wind at 11.9 km/h median\n- **17:00**: Winds settle to 8.4 km/h\n\nAll hours show:\n- ✅ Wind within limits (max 20 km/h)\n- ✅ Gusts acceptable (max 30 km/h)\n- ✅ Dry conditions (no rain)\n- ✅ Wind direction suitable for the site's SE/S/SW orientations\n\n**Disclaimer:** This is an indicator only from a weather-model ensemble. It does not replace pilot judgment, on-site assessment, or official aviation weather forecasts.\n\n**Weather data:** Open-Meteo.com (CC BY 4.0), ICON D2 EPS model with 20 ensemble members.",
+      "turns": 4,
+      "stop_reason": "end_turn",
+      "input_tokens": 10669,
+      "output_tokens": 660,
+      "error": null,
+      "notes": []
+    }
+  ]
+}

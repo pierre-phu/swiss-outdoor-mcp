@@ -11,19 +11,23 @@ from datetime import time as time_type
 from functools import wraps
 from typing import Annotated, Any, ParamSpec, TypeVar
 
+import httpx2
 from mcp.server import MCPServer
 from mcp.server.mcpserver.exceptions import ToolError
 from mcp.types import ToolAnnotations
 from pydantic import Field, ValidationError
 
 from swiss_outdoor_mcp import __version__
+from swiss_outdoor_mcp.clients.offline import fixture_transport, offline_enabled
 from swiss_outdoor_mcp.clients.openmeteo import OpenMeteoClient
 from swiss_outdoor_mcp.clients.transport import TransportClient
-from swiss_outdoor_mcp.data_loader import load_sites
+from swiss_outdoor_mcp.data_loader import load_emission_factors, load_sites
+from swiss_outdoor_mcp.domain.co2 import estimate_co2
 from swiss_outdoor_mcp.domain.flyability import ZURICH, compute_flyability
 from swiss_outdoor_mcp.domain.sites import filter_sites, get_site
 from swiss_outdoor_mcp.errors import SwissOutdoorError
 from swiss_outdoor_mcp.models import (
+    Co2Estimate,
     Connection,
     ConnectionQuery,
     Flyability,
@@ -37,19 +41,24 @@ P = ParamSpec("P")
 R = TypeVar("R")
 
 
+def _offline_transport() -> httpx2.AsyncBaseTransport | None:
+    """Recorded responses when `SWISS_OUTDOOR_OFFLINE=1`, else `None` for the real network."""
+    return fixture_transport() if offline_enabled() else None
+
+
 def _transport_client() -> TransportClient:
     """Build the transport client used by the tools.
 
     A single seam, so tests can inject an `httpx2.MockTransport` serving fixtures without the
-    tools taking a transport argument that would leak into their public JSON schema. This is also
-    where `SWISS_OUTDOOR_OFFLINE` will hook in when offline mode lands.
+    tools taking a transport argument that would leak into their public JSON schema. Offline mode
+    hooks in here too.
     """
-    return TransportClient()
+    return TransportClient(transport=_offline_transport())
 
 
 def _weather_client() -> OpenMeteoClient:
     """Build the weather client. Same seam as `_transport_client`, for the same reasons."""
-    return OpenMeteoClient()
+    return OpenMeteoClient(transport=_offline_transport())
 
 
 mcp = MCPServer(
@@ -58,7 +67,10 @@ mcp = MCPServer(
     instructions=(
         "Deterministic facts for planning Swiss mountain outings by public transport. "
         "Compose the tools yourself: the server never calls a model and never decides for you. "
-        "Always relay the disclaimer that comes with any flyability result."
+        "To suggest where to fly on a given day: list_sites, then get_flyability for the "
+        "candidate sites on that date, then get_connections only to the nearest_stop of the one "
+        "or two best sites. The timetable API states no rate limit, so do not look up every "
+        "site. Always relay the disclaimer that comes with any flyability result."
     ),
 )
 
@@ -107,11 +119,18 @@ async def list_sites(
         str | None,
         Field(
             default=None,
-            description="Compass sector the launch faces, e.g. 'SW'. 16-point, case-insensitive.",
+            description=(
+                "Compass sector the launch faces, case-insensitive: one of N, NNE, NE, ENE, E, "
+                "ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW."
+            ),
         ),
     ] = None,
 ) -> list[Site]:
     """List the paragliding launch sites this server knows, optionally filtered.
+
+    This is the catalogue only and says nothing about the weather. To answer where someone can
+    fly on a given day, check the candidate sites with get_flyability for that date, then look
+    up get_connections to the nearest_stop of the flyable ones.
 
     Use the returned `id` for get_flyability, and the returned `nearest_stop` as the destination
     for get_connections. `access_notes` covers the last leg from that stop, which the timetable
@@ -182,3 +201,26 @@ async def get_connections(
     )
     async with _transport_client() as client:
         return await client.find_connections(query)
+
+
+@mcp.tool(annotations=ToolAnnotations(read_only_hint=True, idempotent_hint=True))
+@tool_errors
+async def estimate_trip_co2(
+    origin: Annotated[
+        str, Field(description="Departure stop, exactly as the timetable spells it.")
+    ],
+    destination: Annotated[
+        str, Field(description="Arrival stop. For a launch site, use its nearest_stop.")
+    ],
+) -> Co2Estimate:
+    """Estimate the one-way CO2e per passenger of a trip between two Swiss stops, by mode.
+
+    Compares train, bus (coach or PostBus), average public transport and car over the same
+    distance: the straight line between the stops times a detour factor. An order-of-magnitude
+    comparison, not a route-exact footprint; say so, and cite `factor_source`, when you use it.
+    Double the figures for a return trip.
+    """
+    async with _transport_client() as client:
+        start = await client.resolve_stop(origin)
+        end = await client.resolve_stop(destination)
+    return estimate_co2(start, end, load_emission_factors())

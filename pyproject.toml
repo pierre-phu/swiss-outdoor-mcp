@@ -40,6 +40,14 @@ dev = [
     "ruff>=0.9",
     "types-pyyaml>=6.0",
 ]
+evals = [
+    "anthropic>=1.8.0",
+]
+
+[tool.uv]
+# `evals` holds the Anthropic SDK for evals/run_eval.py. Installed by default so a plain
+# `uv run` works for the eval; it is never a runtime dependency of the server.
+default-groups = ["dev", "evals"]
 
 [build-system]
 requires = ["hatchling"]
@@ -66,6 +74,9 @@ select = [
     "RUF",  # ruff-specific
 ]
 
+[tool.ruff.lint.isort]
+known-first-party = ["swiss_outdoor_mcp", "evals"]
+
 [tool.mypy]
 python_version = "3.11"
 strict = true
@@ -75,6 +86,8 @@ files = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# The repository root, so tests can import the `evals` package.
+pythonpath = ["."]
 addopts = "--strict-markers --strict-config"
 
 [tool.coverage.run]

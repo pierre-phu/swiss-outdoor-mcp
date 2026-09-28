@@ -1,0 +1,124 @@
+{
+  "stations": [
+    {
+      "id": "8570693",
+      "name": "Verbier, Médran",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": 46.09363,
+        "y": 7.233144
+      },
+      "distance": null,
+      "icon": "bus"
+    },
+    {
+      "id": null,
+      "name": "Médran-Sports SA, Verbier, Route de Verbier Station 59",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Banque Raiffeisen Entremont société coopérative ( Bancomate ), Verbier, Rue de Médran 70",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "W VERBIER HOTEL, Verbier, Rue de Médran 70",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Hôtel les Chamois, Verbier, Rue de Médran 9a",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Boit'askis, Verbier, Rue de Médran 25",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Cabane Blanche Sàrl, Verbier, Rue de Médran 77",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Michaud Verbier SA, Verbier, Rue de Médran 5",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Milk-Bar, Verbier, Rue de Médran 2",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    },
+    {
+      "id": null,
+      "name": "Verbier Language School, Verbier, Rue de Médran 6",
+      "score": null,
+      "coordinate": {
+        "type": "WGS84",
+        "x": null,
+        "y": null
+      },
+      "distance": null,
+      "icon": null
+    }
+  ]
+}

@@ -165,3 +165,42 @@ class TestRequestParameters:
 
         assert params["time"] == "07:05"
         assert params["isArrivalTime"] == "0"
+
+
+class TestResolveStop:
+    async def test_prefers_the_exact_name_over_the_first_result(self) -> None:
+        """ "Leysin-Feydey" must not become "Leysin-Feydey, gare" (docs/api-notes.md 3.5)."""
+        transport = mock_transport({"/locations": "locations_leysin_feydey.json"})
+
+        async with TransportClient(transport=transport) as client:
+            station = await client.resolve_stop("Leysin-Feydey")
+
+        assert station.name == "Leysin-Feydey"
+        assert (station.lat, station.lon) == (46.344436, 7.008347)
+
+    async def test_ignores_case(self) -> None:
+        transport = mock_transport({"/locations": "locations_lausanne.json"})
+
+        async with TransportClient(transport=transport) as client:
+            station = await client.resolve_stop("lausanne")
+
+        assert station.name == "Lausanne"
+
+    async def test_a_near_miss_is_refused_with_suggestions(self) -> None:
+        transport = mock_transport({"/locations": "locations_leysin_feydey.json"})
+
+        async with TransportClient(transport=transport) as client:
+            with pytest.raises(StopNotFoundError) as caught:
+                await client.resolve_stop("Leysin Feydey")
+
+        assert caught.value.stop == "Leysin Feydey"
+        assert "Leysin-Feydey" in caught.value.suggestions
+
+    async def test_a_stop_without_coordinates_is_an_upstream_fault(self) -> None:
+        def handler(request: httpx2.Request) -> httpx2.Response:
+            payload = {"stations": [{"id": "1", "name": "Ghost", "coordinate": None}]}
+            return httpx2.Response(200, json=payload)
+
+        async with TransportClient(transport=mock_transport(handler=handler)) as client:
+            with pytest.raises(UpstreamUnavailableError, match="without coordinates"):
+                await client.resolve_stop("Ghost")
