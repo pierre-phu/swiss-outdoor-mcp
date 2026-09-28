@@ -14,8 +14,9 @@ ensemble-based flyability probabilities, train connections — and the LLM compo
 ## Status
 
 Work in progress towards v0.1; the current pre-release is `0.1.0a1`. Working today:
-`list_sites`, `get_flyability`, `get_connections` and `estimate_trip_co2`. Still to come: offline
-fixture mode and the eval harness. See [`docs/SPEC.md`](docs/SPEC.md).
+`list_sites`, `get_flyability`, `get_connections` and `estimate_trip_co2`, an offline mode that
+replays recorded API responses, and a tool-trace eval
+([latest results](evals/results/2026-09-28/README.md)). See [`docs/SPEC.md`](docs/SPEC.md).
 
 ## Example
 
@@ -27,6 +28,7 @@ response has all eight, 10:00 to 17:00.
 {
   "site_id": "fiesch",
   "date": "2026-09-26",
+  "weekday": "Saturday",
   "p_flyable": 1.0,
   "hourly": [
     {
